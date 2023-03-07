@@ -6,7 +6,7 @@ set_property(CACHE TARGET_PLATFORM PROPERTY STRINGS default vita switch android 
 
 string(TOLOWER ${TARGET_PLATFORM} TARGET_PLATFORM)
 
-option(DRAW_FPS "Draw FPS on the top left corner of the window." OFF)
+option(DRAW_FPS "Draw FPS on the top left corner of the window." ON)
 option(DRAW_ROUTING "Draw routing debug information." OFF)
 option(DRAW_HIGHWAY_TERRAIN "Draw highway debug information." OFF)
 option(DRAW_ROAD_NETWORK_IDS "Draw road network IDs for debugging." OFF)

@@ -86,11 +86,11 @@ static void draw_foreground(void) {
                 button_click(2, 0);
             }
             nk_layout_row_push(ctx, width);
-            if (nk_button_label(ctx, "Game editor")) {
+            if (nk_button_label(ctx, "Play scenario")) {
                 button_click(3, 0);
             }
             nk_layout_row_push(ctx, width);
-            if (nk_button_label(ctx, "Assignment editor")) {
+            if (nk_button_label(ctx, "Map editor")) {
                 button_click(4, 0);
             }
             nk_layout_row_push(ctx, width);
