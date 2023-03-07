@@ -1,0 +1,7 @@
+https://github.com/crudelios/japacker/tree/main/src
+https://github.com/rxi/microui
+https://github.com/Immediate-Mode-UI/Nuklear
+https://github.com/Immediate-Mode-UI/Nuklear/wiki/Complete-font-guide#configuring-the-font
+https://github.com/actsl/kiss_sdl
+https://github.com/bvschaik/julius/issues/513
+https://github.com/bvschaik/citybuilding-tools/wiki/SG-file-format
