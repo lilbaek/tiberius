@@ -1,6 +1,19 @@
 <?xml version="1.0"?>
 <!DOCTYPE assetlist>
 <assetlist name="terrain">
+    <!-- Files related to access_ramp -->
+    <image id="access_ramp_01" width="118" height="60" isometric="true">
+      <layer src="access_ramp_01"/>
+    </image>
+    <image id="access_ramp_02" width="118" height="76" isometric="true">
+      <layer src="access_ramp_02"/>
+    </image>
+    <image id="access_ramp_03" width="118" height="75" isometric="true">
+      <layer src="access_ramp_03"/>
+    </image>
+    <image id="access_ramp_04" width="118" height="60" isometric="true">
+      <layer src="access_ramp_04"/>
+    </image>
     <!-- Files related to earthquake -->
     <image id="earthquake_01" src="earthquake_01"/>
     <image id="earthquake_02" src="earthquake_02"/>
@@ -283,6 +296,12 @@
     <image id="grass_1_40" src="grass_1_40"/>
     <image id="grass_1_41" src="grass_1_41"/>
     <image id="grass_1_42" src="grass_1_42"/>
+    <image id="grass_1_43" src="grass_1_43"/>
+    <image id="grass_1_44" src="grass_1_44"/>
+    <image id="grass_1_45" src="grass_1_45"/>
+    <image id="grass_1_46" src="grass_1_46"/>
+    <image id="grass_1_47" src="grass_1_47"/>
+    <image id="grass_1_48" src="grass_1_48"/>
     <image id="grass_1" src="grass_1_01">
       <layer group="this" image="grass_1_01" x="0" y="0"/>
       <layer group="this" image="grass_1_02" x="0" y="0"/>
@@ -326,6 +345,12 @@
       <layer group="this" image="grass_1_40" x="0" y="0"/>
       <layer group="this" image="grass_1_41" x="0" y="0"/>
       <layer group="this" image="grass_1_42" x="0" y="0"/>
+      <layer group="this" image="grass_1_43" x="0" y="0"/>
+      <layer group="this" image="grass_1_44" x="0" y="0"/>
+      <layer group="this" image="grass_1_45" x="0" y="0"/>
+      <layer group="this" image="grass_1_46" x="0" y="0"/>
+      <layer group="this" image="grass_1_47" x="0" y="0"/>
+      <layer group="this" image="grass_1_48" x="0" y="0"/>
     </image>
     <!-- Files related to grass_2 -->
     <image id="grass_2_01" src="grass_2_01"/>
@@ -369,6 +394,12 @@
     <image id="grass_2_39" src="grass_2_39"/>
     <image id="grass_2_40" src="grass_2_40"/>
     <image id="grass_2_41" src="grass_2_41"/>
+    <image id="grass_2_43" src="grass_2_43"/>
+    <image id="grass_2_44" src="grass_2_44"/>
+    <image id="grass_2_45" src="grass_2_45"/>
+    <image id="grass_2_46" src="grass_2_46"/>
+    <image id="grass_2_47" src="grass_2_47"/>
+    <image id="grass_2_48" src="grass_2_48"/>
     <image id="grass_2" src="grass_2_01">
       <layer group="this" image="grass_2_01" x="0" y="0"/>
       <layer group="this" image="grass_2_02" x="0" y="0"/>
@@ -411,6 +442,12 @@
       <layer group="this" image="grass_2_39" x="0" y="0"/>
       <layer group="this" image="grass_2_40" x="0" y="0"/>
       <layer group="this" image="grass_2_41" x="0" y="0"/>
+      <layer group="this" image="grass_2_43" x="0" y="0"/>
+      <layer group="this" image="grass_2_44" x="0" y="0"/>
+      <layer group="this" image="grass_2_45" x="0" y="0"/>
+      <layer group="this" image="grass_2_46" x="0" y="0"/>
+      <layer group="this" image="grass_2_47" x="0" y="0"/>
+      <layer group="this" image="grass_2_48" x="0" y="0"/>
     </image>
     <!-- Files related to meadow -->
     <image id="meadow_01" width="58" height="30" isometric="true">

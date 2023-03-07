@@ -170,7 +170,6 @@ static void set_rock_image(int x, int y, int grid_offset) {
 }
 
 
-
 void map_tiles_update_all_rocks(void) {
     foreach_map_tile(clear_rock_image);
     foreach_map_tile(set_rock_image);
@@ -918,10 +917,8 @@ static void set_empty_land_pass1(int x, int y, int grid_offset) {
     if (!map_terrain_is(grid_offset, TERRAIN_NOT_CLEAR) && !map_image_at(grid_offset) &&
         !(map_random_get(grid_offset) & 0xf0)) {
         int image_id;
-        //assets_get_group_id()
-        // -
         if (map_property_is_alternate_terrain(grid_offset)) {
-            image_id = image_group(GROUP_TERRAIN_GRASS_2);
+            image_id = assets_get_image_id("terrain", "grass_2_01"); //image_group(GROUP_TERRAIN_GRASS_2);
         } else {
             image_id = assets_get_image_id("terrain", "grass_1_01"); //image_group(GROUP_TERRAIN_GRASS_1);
         }
@@ -933,9 +930,9 @@ static void set_empty_land_pass2(int x, int y, int grid_offset) {
     if (!map_terrain_is(grid_offset, TERRAIN_NOT_CLEAR) && !map_image_at(grid_offset)) {
         int image_id;
         if (map_property_is_alternate_terrain(grid_offset)) {
-            image_id = image_group(GROUP_TERRAIN_GRASS_2);
+            image_id = assets_get_image_id("terrain", "grass_2_01");
         } else {
-            image_id = assets_get_image_id("terrain", "grass_1_01"); //image_group(GROUP_TERRAIN_GRASS_1);
+            image_id = assets_get_image_id("terrain", "grass_1_01");
         }
         if (is_clear(x, y, 4, TERRAIN_ALL, 1)) {
             set_empty_land_image(x, y, 4, image_id + 42);
@@ -964,15 +961,19 @@ void map_tiles_update_region_empty_land(int x_min, int y_min, int x_max, int y_m
 static void set_meadow_image(int x, int y, int grid_offset) {
     if (map_terrain_is(grid_offset, TERRAIN_MEADOW) && !map_terrain_is(grid_offset, FORBIDDEN_TERRAIN_MEADOW)) {
         int random = map_random_get(grid_offset) & 3;
-        int image_id = image_group(GROUP_TERRAIN_MEADOW);
-        //int image_id = assets_get_image_id("terrain", "dirt");
+        int imageIndex = 1;
         if (map_terrain_has_only_meadow_in_ring(x, y, 2)) {
-            map_image_set(grid_offset, image_id + random + 8);
+            imageIndex += random + 8;
         } else if (map_terrain_has_only_meadow_in_ring(x, y, 1)) {
-            map_image_set(grid_offset, image_id + random + 4);
-        } else {
-            map_image_set(grid_offset, image_id + random);
+            imageIndex += random + 4;
         }
+        char buff[10];
+        if (imageIndex < 10) {
+            snprintf(buff, 10, "meadow_0%d", imageIndex);
+        } else {
+            snprintf(buff, 10, "meadow_%d", imageIndex);
+        }
+        map_image_set(grid_offset, assets_get_image_id("terrain", buff));
         map_property_set_multi_tile_size(grid_offset, 1);
         map_property_mark_draw_tile(grid_offset);
         map_aqueduct_remove(grid_offset);
@@ -1219,6 +1220,9 @@ static void set_elevation_aqueduct_image(int grid_offset) {
     }
 }
 
+/*
+ * Render elevation images taking into account access ramps and rotation of the screen
+ */
 static void set_elevation_image(int x, int y, int grid_offset) {
     if (map_terrain_is(grid_offset, TERRAIN_ACCESS_RAMP) && !map_image_at(grid_offset)) {
         int image_offset = get_access_ramp_image_offset(x, y);
@@ -1232,11 +1236,14 @@ static void set_elevation_image(int x, int y, int grid_offset) {
             } else {
                 map_terrain_remove(grid_offset, TERRAIN_ELEVATION);
                 //map_image_set(grid_offset, image_group(GROUP_TERRAIN_GRASS_1) + (map_random_get(grid_offset) & 7));
-                map_image_set(grid_offset, assets_get_image_id("terrain", "grass_1_01") + (map_random_get(grid_offset) & 7));
+                map_image_set(grid_offset,
+                              assets_get_image_id("terrain", "grass_1_01") + (map_random_get(grid_offset) & 7));
             }
         } else {
+            char shrub_string_buff[15];
+            snprintf(shrub_string_buff, 15, "access_ramp_0%d", image_offset + 1);
             map_building_tiles_add(0, x, y, 2,
-                                   image_group(GROUP_TERRAIN_ACCESS_RAMP) + image_offset, TERRAIN_ACCESS_RAMP);
+                                   assets_get_image_id("terrain", shrub_string_buff), TERRAIN_ACCESS_RAMP);
         }
     }
     if (map_elevation_at(grid_offset) && !map_terrain_is(grid_offset, TERRAIN_ACCESS_RAMP)) {
@@ -1264,7 +1271,12 @@ static void set_elevation_image(int x, int y, int grid_offset) {
                 } else if (terrain & TERRAIN_AQUEDUCT) {
                     set_elevation_aqueduct_image(grid_offset);
                 } else if (terrain & TERRAIN_MEADOW) {
-                    map_image_set(grid_offset, image_group(GROUP_TERRAIN_MEADOW) + (map_random_get(grid_offset) & 3) + 1);
+                    char meadow_string_buff[10];
+                    int imageIndex = (map_random_get(grid_offset) & 3) + 2;
+                    snprintf(meadow_string_buff, 10, "meadow_0%d", imageIndex);
+                    map_image_set(grid_offset, assets_get_image_id("terrain", meadow_string_buff));
+                    /*map_image_set(grid_offset,
+                                  image_group(GROUP_TERRAIN_MEADOW) + (map_random_get(grid_offset) & 3) + 1);*/
                 } else {
                     map_image_set(grid_offset,
                                   assets_get_image_id("terrain", "grass_1_01") + (map_random_get(grid_offset) & 7));
@@ -1273,7 +1285,16 @@ static void set_elevation_image(int x, int y, int grid_offset) {
         } else {
             map_property_set_multi_tile_xy(grid_offset, 0, 0, 1);
             map_terrain_add(grid_offset, TERRAIN_ELEVATION);
-            map_image_set(grid_offset, image_group(GROUP_TERRAIN_ELEVATION) + img->group_offset + img->item_offset);
+
+            char tree_string_buff[13];
+            int imageIndex = 1 + img->group_offset + img->item_offset;
+            if (imageIndex < 10) {
+                snprintf(tree_string_buff, 13, "elevation_0%d", imageIndex);
+            } else {
+                snprintf(tree_string_buff, 13, "elevation_%d", imageIndex);
+            }
+            map_image_set(grid_offset, assets_get_image_id("terrain", tree_string_buff));
+            //map_image_set(grid_offset, image_group(GROUP_TERRAIN_ELEVATION) + img->group_offset + img->item_offset);
         }
     }
 }

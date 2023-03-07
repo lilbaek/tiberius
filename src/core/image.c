@@ -756,7 +756,7 @@ int image_load_climate(int climate_id, int is_editor, int force_reload, int keep
 
     data.images_with_tops = 0;
 
-    printFileName(GROUP_TERRAIN_ROCK, 12);
+    printFileName(GROUP_TERRAIN_ACCESS_RAMP, 5);
     return 1;
 }
 
