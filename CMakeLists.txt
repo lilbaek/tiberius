@@ -280,6 +280,8 @@ set(CORE_FILES
     ${PROJECT_SOURCE_DIR}/src/core/random.c
     ${PROJECT_SOURCE_DIR}/src/core/smacker.c
     ${PROJECT_SOURCE_DIR}/src/core/speed.c
+    ${PROJECT_SOURCE_DIR}/src/core/sds.c
+    ${PROJECT_SOURCE_DIR}/src/core/sdsalloc.h
     ${PROJECT_SOURCE_DIR}/src/core/string.c
     ${PROJECT_SOURCE_DIR}/src/core/time.c
     ${PROJECT_SOURCE_DIR}/src/core/xml_parser.c

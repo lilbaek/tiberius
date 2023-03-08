@@ -12,6 +12,7 @@
 #include "map/routing_data.h"
 #include "map/sprite.h"
 #include "map/terrain.h"
+#include "assets/assets.h"
 
 static void map_routing_update_land_noncitizen(void);
 
@@ -136,7 +137,7 @@ void map_routing_update_land_citizen(void)
                     // shouldn't happen
                     terrain_land_noncitizen.items[grid_offset] = CITIZEN_4_CLEAR_TERRAIN; // BUG: should be citizen?
                     map_terrain_remove(grid_offset, TERRAIN_BUILDING);
-                    map_image_set(grid_offset, (map_random_get(grid_offset) & 7) + image_group(GROUP_TERRAIN_GRASS_1));
+                    map_image_set(grid_offset, (map_random_get(grid_offset) & 7) + assets_get_image_id("terrain", "grass_1_01"));
                     map_property_mark_draw_tile(grid_offset);
                     map_property_set_multi_tile_size(grid_offset, 1);
                     continue;

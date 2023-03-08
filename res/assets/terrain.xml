@@ -302,6 +302,16 @@
     <image id="grass_1_46" src="grass_1_46"/>
     <image id="grass_1_47" src="grass_1_47"/>
     <image id="grass_1_48" src="grass_1_48"/>
+    <image id="grass_1_49" src="grass_1_49"/>
+    <image id="grass_1_50" src="grass_1_50"/>
+    <image id="grass_1_51" src="grass_1_51"/>
+    <image id="grass_1_52" src="grass_1_52"/>
+    <image id="grass_1_53" src="grass_1_53"/>
+    <image id="grass_1_54" src="grass_1_54"/>
+    <image id="grass_1_55" src="grass_1_55"/>
+    <image id="grass_1_56" src="grass_1_56"/>
+    <image id="grass_1_57" src="grass_1_57"/>
+    <image id="grass_1_58" src="grass_1_58"/>
     <image id="grass_1" src="grass_1_01">
       <layer group="this" image="grass_1_01" x="0" y="0"/>
       <layer group="this" image="grass_1_02" x="0" y="0"/>
@@ -351,6 +361,16 @@
       <layer group="this" image="grass_1_46" x="0" y="0"/>
       <layer group="this" image="grass_1_47" x="0" y="0"/>
       <layer group="this" image="grass_1_48" x="0" y="0"/>
+      <layer group="this" image="grass_1_49" x="0" y="0"/>
+      <layer group="this" image="grass_1_50" x="0" y="0"/>
+      <layer group="this" image="grass_1_51" x="0" y="0"/>
+      <layer group="this" image="grass_1_52" x="0" y="0"/>
+      <layer group="this" image="grass_1_53" x="0" y="0"/>
+      <layer group="this" image="grass_1_54" x="0" y="0"/>
+      <layer group="this" image="grass_1_55" x="0" y="0"/>
+      <layer group="this" image="grass_1_56" x="0" y="0"/>
+      <layer group="this" image="grass_1_57" x="0" y="0"/>
+      <layer group="this" image="grass_1_58" x="0" y="0"/>
     </image>
     <!-- Files related to grass_2 -->
     <image id="grass_2_01" src="grass_2_01"/>
@@ -394,12 +414,23 @@
     <image id="grass_2_39" src="grass_2_39"/>
     <image id="grass_2_40" src="grass_2_40"/>
     <image id="grass_2_41" src="grass_2_41"/>
+    <image id="grass_2_42" src="grass_2_42"/>
     <image id="grass_2_43" src="grass_2_43"/>
     <image id="grass_2_44" src="grass_2_44"/>
     <image id="grass_2_45" src="grass_2_45"/>
     <image id="grass_2_46" src="grass_2_46"/>
     <image id="grass_2_47" src="grass_2_47"/>
     <image id="grass_2_48" src="grass_2_48"/>
+    <image id="grass_2_49" src="grass_2_49"/>
+    <image id="grass_2_50" src="grass_2_50"/>
+    <image id="grass_2_51" src="grass_2_51"/>
+    <image id="grass_2_52" src="grass_2_52"/>
+    <image id="grass_2_53" src="grass_2_53"/>
+    <image id="grass_2_54" src="grass_2_54"/>
+    <image id="grass_2_55" src="grass_2_55"/>
+    <image id="grass_2_56" src="grass_2_56"/>
+    <image id="grass_2_57" src="grass_2_57"/>
+    <image id="grass_2_58" src="grass_2_58"/>
     <image id="grass_2" src="grass_2_01">
       <layer group="this" image="grass_2_01" x="0" y="0"/>
       <layer group="this" image="grass_2_02" x="0" y="0"/>
@@ -442,12 +473,23 @@
       <layer group="this" image="grass_2_39" x="0" y="0"/>
       <layer group="this" image="grass_2_40" x="0" y="0"/>
       <layer group="this" image="grass_2_41" x="0" y="0"/>
+      <layer group="this" image="grass_2_42" x="0" y="0"/>
       <layer group="this" image="grass_2_43" x="0" y="0"/>
       <layer group="this" image="grass_2_44" x="0" y="0"/>
       <layer group="this" image="grass_2_45" x="0" y="0"/>
       <layer group="this" image="grass_2_46" x="0" y="0"/>
       <layer group="this" image="grass_2_47" x="0" y="0"/>
       <layer group="this" image="grass_2_48" x="0" y="0"/>
+      <layer group="this" image="grass_2_49" x="0" y="0"/>
+      <layer group="this" image="grass_2_50" x="0" y="0"/>
+      <layer group="this" image="grass_2_51" x="0" y="0"/>
+      <layer group="this" image="grass_2_52" x="0" y="0"/>
+      <layer group="this" image="grass_2_53" x="0" y="0"/>
+      <layer group="this" image="grass_2_54" x="0" y="0"/>
+      <layer group="this" image="grass_2_55" x="0" y="0"/>
+      <layer group="this" image="grass_2_56" x="0" y="0"/>
+      <layer group="this" image="grass_2_57" x="0" y="0"/>
+      <layer group="this" image="grass_2_58" x="0" y="0"/>
     </image>
     <!-- Files related to meadow -->
     <image id="meadow_01" width="58" height="30" isometric="true">

@@ -20,6 +20,7 @@
 #include "scenario/property.h"
 #include "translation/translation.h"
 #include "widget/city_draw_highway.h"
+#include "assets/assets.h"
 
 static int show_building_religion(const building *b)
 {
@@ -457,7 +458,7 @@ static int draw_footprint_water(int x, int y, float scale, int grid_offset)
         image_draw_isometric_footprint_from_draw_tile(map_image_at(grid_offset), x, y, 0, scale);
     } else if (map_terrain_is(grid_offset, TERRAIN_WALL)) {
         // display grass
-        int image_id = image_group(GROUP_TERRAIN_GRASS_1) + (map_random_get(grid_offset) & 7);
+        int image_id = assets_get_image_id("terrain", "grass_1_01") + (map_random_get(grid_offset) & 7);
         image_draw_isometric_footprint_from_draw_tile(image_id, x, y, 0, scale);
     } else if (is_building) {
         building *b = building_get(map_building_at(grid_offset));
@@ -669,7 +670,7 @@ static int draw_footprint_desirability(int x, int y, float scale, int grid_offse
         }
     } else if (map_terrain_is(grid_offset, TERRAIN_AQUEDUCT | TERRAIN_WALL)) {
         // display empty land/grass
-        int image_id = image_group(GROUP_TERRAIN_GRASS_1) + (map_random_get(grid_offset) & 7);
+        int image_id = assets_get_image_id("terrain", "grass_1_01") + (map_random_get(grid_offset) & 7);
         image_draw_isometric_footprint_from_draw_tile(image_id, x, y, color_mask, scale);
     } else if (map_terrain_is(grid_offset, TERRAIN_BUILDING)) {
         if (has_deleted_building(grid_offset)) {

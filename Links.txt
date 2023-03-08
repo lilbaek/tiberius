@@ -5,3 +5,5 @@ https://github.com/Immediate-Mode-UI/Nuklear/wiki/Complete-font-guide#configurin
 https://github.com/actsl/kiss_sdl
 https://github.com/bvschaik/julius/issues/513
 https://github.com/bvschaik/citybuilding-tools/wiki/SG-file-format
+https://github.com/oz123/awesome-c
+https://github.com/jcorporation/sds

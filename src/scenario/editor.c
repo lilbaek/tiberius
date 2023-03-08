@@ -9,6 +9,7 @@
 
 #include <string.h>
 
+// TODO: Change this?
 static const struct {
     int width;
     int height;
