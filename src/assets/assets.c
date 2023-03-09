@@ -42,7 +42,7 @@ void assets_init(int force_reload, color_t **main_images, int *main_image_widths
     asset_image_load_all(main_images, main_image_widths);
 
     // By default, if the requested image is not found, the roadblock image will be shown.
-    // This ensures compatibility with previous release versions of Augustus, which only had roadblocks
+    // This ensures compatibility with previous release versions of tiberius, which only had roadblocks
     data.roadblock_image_id = assets_get_group_id("Logistics");
     data.roadblock_image = asset_image_get_from_id(data.roadblock_image_id - IMAGE_MAIN_ENTRIES);
     data.asset_lookup[ASSET_HIGHWAY_BASE_START] = assets_get_image_id("Logistics", "Highway_Base_Start");

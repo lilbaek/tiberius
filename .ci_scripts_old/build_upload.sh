@@ -29,43 +29,43 @@ DEPLOY_FILE=
 case "$DEPLOY" in
 "linux")
   PACKAGE=linux
-  DEPLOY_FILE=augustus-$VERSION-linux-x86_64.zip
-  cp "${build_dir}/augustus.zip" "deploy/$DEPLOY_FILE"
+  DEPLOY_FILE=tiberius-$VERSION-linux-x86_64.zip
+  cp "${build_dir}/tiberius.zip" "deploy/$DEPLOY_FILE"
   ;;
 "vita")
   PACKAGE=vita
-  DEPLOY_FILE=augustus-$VERSION-vita.vpk
-  cp "${build_dir}/augustus.vpk" "deploy/$DEPLOY_FILE"
+  DEPLOY_FILE=tiberius-$VERSION-vita.vpk
+  cp "${build_dir}/tiberius.vpk" "deploy/$DEPLOY_FILE"
   ;;
 "switch")
   PACKAGE=switch
-  DEPLOY_FILE=augustus-$VERSION-switch.nro
-  cp "${build_dir}/augustus.nro" "deploy/$DEPLOY_FILE"
+  DEPLOY_FILE=tiberius-$VERSION-switch.nro
+  cp "${build_dir}/tiberius.nro" "deploy/$DEPLOY_FILE"
   ;;
 "appimage")
   PACKAGE=linux-appimage
-  DEPLOY_FILE=augustus-$VERSION-linux.AppImage
-  cp "${build_dir}/augustus.AppImage" "deploy/$DEPLOY_FILE"
+  DEPLOY_FILE=tiberius-$VERSION-linux.AppImage
+  cp "${build_dir}/tiberius.AppImage" "deploy/$DEPLOY_FILE"
   ;;
 "mac")
   PACKAGE=mac
-  DEPLOY_FILE=augustus-$VERSION-mac.dmg
-  cp "${build_dir}/augustus.dmg" "deploy/$DEPLOY_FILE"
+  DEPLOY_FILE=tiberius-$VERSION-mac.dmg
+  cp "${build_dir}/tiberius.dmg" "deploy/$DEPLOY_FILE"
   ;;
 "android")
   PACKAGE=android
-  if [ -f "${build_dir}/augustus.apk" ]
+  if [ -f "${build_dir}/tiberius.apk" ]
   then
-    DEPLOY_FILE=augustus-$VERSION-android.apk
-    cp "${build_dir}/augustus.apk" "deploy/$DEPLOY_FILE"
+    DEPLOY_FILE=tiberius-$VERSION-android.apk
+    cp "${build_dir}/tiberius.apk" "deploy/$DEPLOY_FILE"
   fi
   ;;
 "emscripten")
   PACKAGE=emscripten
-  if [ -f "${build_dir}/augustus.html" ]
+  if [ -f "${build_dir}/tiberius.html" ]
   then
-    DEPLOY_FILE=augustus-$VERSION-emscripten.html
-    cp "${build_dir}/augustus.html" "deploy/$DEPLOY_FILE"
+    DEPLOY_FILE=tiberius-$VERSION-emscripten.html
+    cp "${build_dir}/tiberius.html" "deploy/$DEPLOY_FILE"
   fi
   ;;
 *)
@@ -92,5 +92,5 @@ then
   exit
 fi
 
-curl -u "$UPLOAD_TOKEN" -T deploy/$DEPLOY_FILE https://augustus.josecadete.net/upload/$REPO/$PACKAGE/$VERSION/$DEPLOY_FILE
-echo "Uploaded. URL: https://augustus.josecadete.net/$REPO.html" 
+curl -u "$UPLOAD_TOKEN" -T deploy/$DEPLOY_FILE https://tiberius.josecadete.net/upload/$REPO/$PACKAGE/$VERSION/$DEPLOY_FILE
+echo "Uploaded. URL: https://tiberius.josecadete.net/$REPO.html"

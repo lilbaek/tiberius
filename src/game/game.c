@@ -102,7 +102,7 @@ int game_init(void)
         return 0;
     }
 
-    init_augustus_building_properties();
+    init_Tiberius_building_properties();
     load_custom_messages();
     sound_system_init();
     game_state_init();

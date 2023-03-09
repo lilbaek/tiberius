@@ -30,7 +30,7 @@ static translation_string all_strings[] = {
     {TR_CONFIG_ARE_YOU_SURE, "Auf Standard zurücksetzen?"},
     {TR_CONFIG_YOU_WILL_LOSE_YOUR_CONFIGS, "Sie verlieren alle Ihre benutzerdefinierten Konfigurationen."},
     {TR_CONFIG_YOU_WILL_LOSE_YOUR_HOTKEYS, "Sie verlieren alle Ihre benutzerdefinierten Schnelltasten."},
-    {TR_CONFIG_TITLE, "Augustus Einstellungen"},
+    {TR_CONFIG_TITLE, "tiberius Einstellungen"},
     {TR_CONFIG_HEADER_GENERAL, "Allgemeine Einstellungen"},
     {TR_CONFIG_HEADER_UI_CHANGES, "Benutzeroberfläche"},
     {TR_CONFIG_HEADER_GAMEPLAY_CHANGES, "Schwierigkeit"},
@@ -104,7 +104,7 @@ static translation_string all_strings[] = {
     {TR_CONFIG_ROAMERS_DONT_SKIP_CORNERS, "Wandernde Arbeiter kürzen an Ecken nicht ab"},
     {TR_CONFIG_SHOW_MAX_POSSIBLE_PROSPERITY, "Anzeige des maximalen Wohlstands mit aktuellen Behausungen."},
     {TR_CONFIG_AUTO_KILL_ANIMALS, "Einwohner werden automatisch harmlose Tiere töten"},
-    {TR_HOTKEY_TITLE, "Augustus Schnelltasten"},
+    {TR_HOTKEY_TITLE, "tiberius Schnelltasten"},
     {TR_HOTKEY_LABEL, "Schnelltasten"},
     {TR_HOTKEY_ALTERNATIVE_LABEL, "Alternativ"},
     {TR_HOTKEY_HEADER_ARROWS, "Richtungstasten"},
@@ -431,7 +431,7 @@ static translation_string all_strings[] = {
     {TR_OVERLAY_ROADS, "Straßen"},
     {TR_NO_EXTRA_ASSETS_TITLE, " Extra Assets wurden nicht geladen"},
     {TR_NO_EXTRA_ASSETS_MESSAGE,
-        "Extra Augustus Assets wurden nicht geladen.\n"
+        "Extra tiberius Assets wurden nicht geladen.\n"
         "Das kann durch ein fehlendes oder veraltetes Assetverzeichnis passieren.\n"
         "Bitte stellen Sie sicher, dass die das aktuellste Assetverzeichnis haben, welches durch Github bereitgestellt wird."},
     {TR_WARNING_WATER_NEEDED_FOR_LIGHTHOUSE, "Leuchtturm muss nah am Wasser platziert werden."},
@@ -602,11 +602,11 @@ static translation_string all_strings[] = {
     {TR_WINDOW_FIGURE_TOURIST, "Dieser Reisende hat:"},
     {TR_FIGURE_TYPE_TOURIST,  "Reisender"},
     {TR_SAVEGAME_LARGER_VERSION_TITLE, "Inkompatible Speicherstand-Version"},
-    {TR_SAVEGAME_LARGER_VERSION_MESSAGE, "Der Speicherstand, den Sie zu laden versuchen, ist für eine neuere Version von Augustus.\n Bitte aktualisieren Sie Augustus auf die neueste Version."},
+    {TR_SAVEGAME_LARGER_VERSION_MESSAGE, "Der Speicherstand, den Sie zu laden versuchen, ist für eine neuere Version von tiberius.\n Bitte aktualisieren Sie tiberius auf die neueste Version."},
     {TR_SAVEGAME_NOT_ABLE_TO_SAVE_TITLE, "Spiel kann nicht gespeichert werden"},
     {TR_SAVEGAME_NOT_ABLE_TO_SAVE_MESSAGE, "Es war nicht möglich, das Spiel zu speichern.\n"
         "Es könnte daran liegen, dass der Ordner, in dem Caesar 3 die Spielstände speichert, Administratorrechte erfordert.\n"
-        "Bitte verschieben Sie entweder den Caesar-3-Ordner an einen Ort, der keinen Administrator-Zugang erfordert, oder führen Sie Augustus als Administrator aus (nicht empfohlen)."},
+        "Bitte verschieben Sie entweder den Caesar-3-Ordner an einen Ort, der keinen Administrator-Zugang erfordert, oder führen Sie tiberius als Administrator aus (nicht empfohlen)."},
     {TR_BUILDING_COLONNADE, "Kolonnade"},
     {TR_BUILDING_LARARIUM, "Lararium"},
     {TR_WINDOW_BUILDING_LARARIUM_DESC, "Dieser kleine Schrein ist den Laren, den Ahnengeistern des römischen Volkes, gewidmet. Hier können kleine Opfer und Gebete dargebracht werden."},
@@ -854,7 +854,7 @@ static translation_string all_strings[] = {
     {TR_EDITOR_CHOOSE_CUSTOM_EMPIRE, "Benutzerdefiniertes Imperium wählen"},
     {TR_EDITOR_CUSTOM_EMPIRE_TITLE, "Laden eines Imperiums"},
     {TR_EDITOR_UNABLE_TO_LOAD_EMPIRE_TITLE, "Benutzerdefiniertes Imperium kann nicht geladen werden"},
-    {TR_EDITOR_UNABLE_TO_LOAD_EMPIRE_MESSAGE, "Bitte kontrolliere augustus-log.txt in deinem Augustus Verzeichnis für Details."},
+    {TR_EDITOR_UNABLE_TO_LOAD_EMPIRE_MESSAGE, "Bitte kontrolliere tiberius-log.txt in deinem tiberius Verzeichnis für Details."},
     {TR_EDITOR_SHORT_ROUTE_TEXT, "rt"},
     {TR_EDITOR_REFRESH_EMPIRE, "Aktualisieren (F5)"},
     {TR_EDITOR_MAX_WAGES, "hoch bis"},

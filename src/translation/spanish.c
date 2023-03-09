@@ -30,7 +30,7 @@ static translation_string all_strings[] = {
     {TR_CONFIG_ARE_YOU_SURE, "¿Restablecer la configuración predeterminada?"},
     {TR_CONFIG_YOU_WILL_LOSE_YOUR_CONFIGS, "Perderás todas tus configuraciones personalizadas."},
     {TR_CONFIG_YOU_WILL_LOSE_YOUR_HOTKEYS, "Perderás todos tus atajos personalizados."},
-    {TR_CONFIG_TITLE, "Opciones de configuración de Augustus"},
+    {TR_CONFIG_TITLE, "Opciones de configuración de tiberius"},
     {TR_CONFIG_HEADER_GENERAL, "Configuraciones generales"},
     {TR_CONFIG_HEADER_UI_CHANGES, "Interfaz de usuario"},
     {TR_CONFIG_HEADER_GAMEPLAY_CHANGES, "Dificultad"},
@@ -95,7 +95,7 @@ static translation_string all_strings[] = {
     {TR_CONFIG_HOUSES_DONT_EXPAND_INTO_GARDENS, "Las residencias no se expanden hacia los jardines"},
     {TR_CONFIG_ROAMERS_DONT_SKIP_CORNERS, "Los caminantes no acortan camino por las esquinas"},
     {TR_CONFIG_SHOW_MAX_POSSIBLE_PROSPERITY, "Mostrar puntuación de prosperidad máxima obtenible"},
-    {TR_HOTKEY_TITLE, "Configuración de atajos de teclado de Augustus"},
+    {TR_HOTKEY_TITLE, "Configuración de atajos de teclado de tiberius"},
     {TR_HOTKEY_LABEL, "Principal"},
     {TR_HOTKEY_HEADER_BOOKMARKS, "Atajos de mapa"},
     {TR_HOTKEY_HEADER_EDITOR, "Editor"},
@@ -412,7 +412,7 @@ static translation_string all_strings[] = {
     {TR_OVERLAY_ROADS, "Caminos"},
     {TR_NO_EXTRA_ASSETS_TITLE, "Problema con los recursos adicionales"},
     {TR_NO_EXTRA_ASSETS_MESSAGE,
-        "Los recursos adicionales de Augustus no pudieron cargarse.\n"
+        "Los recursos adicionales de tiberius no pudieron cargarse.\n"
         "Falta la carpeta 'assets' o está desactualizada.\n"
         "Asegúrate de tener la última versión de la carpeta 'assets', que puedes obtenerse desde GitHub."},
     {TR_WARNING_WATER_NEEDED_FOR_LIGHTHOUSE, "El faro debe ser construido cerca del agua."},
@@ -577,7 +577,7 @@ static translation_string all_strings[] = {
     {TR_WINDOW_FIGURE_TOURIST, "Este viajero ha gastado: "},
     {TR_FIGURE_TYPE_TOURIST,  "Viajero"},
     {TR_SAVEGAME_LARGER_VERSION_TITLE, "Versión de guardado incompatible" },
-    {TR_SAVEGAME_LARGER_VERSION_MESSAGE, "La partida guardada que estás intentando cargar es para una versión más reciente de Augustus.\nActualiza Augustus a la versión más reciente." },
+    {TR_SAVEGAME_LARGER_VERSION_MESSAGE, "La partida guardada que estás intentando cargar es para una versión más reciente de tiberius.\nActualiza tiberius a la versión más reciente." },
     {TR_BUILDING_COLONNADE, "Columnata" },
     {TR_BUILDING_LARARIUM, "Lararium" },
     {TR_WINDOW_BUILDING_LARARIUM_DESC, "Este pequeño santuario está dedicado a los espíritus ancestrales del pueblo romano. Aquí se pueden hacer pequeños sacrificios y oraciones."},

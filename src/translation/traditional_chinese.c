@@ -30,7 +30,7 @@ static translation_string all_strings[] = {
     {TR_CONFIG_ARE_YOU_SURE, "重置為默認?"},
     {TR_CONFIG_YOU_WILL_LOSE_YOUR_CONFIGS, "你將丟失所有配置訊息。"},
     {TR_CONFIG_YOU_WILL_LOSE_YOUR_HOTKEYS, "你將丟失所有熱鍵訊息。"},
-    {TR_CONFIG_TITLE, "Augustus 配置"},
+    {TR_CONFIG_TITLE, "tiberius 配置"},
     {TR_CONFIG_HEADER_GENERAL, "通用設置"},
     {TR_CONFIG_HEADER_UI_CHANGES, "用戶界面更變"},
     {TR_CONFIG_HEADER_GAMEPLAY_CHANGES, "遊戲難度"},
@@ -99,7 +99,7 @@ static translation_string all_strings[] = {
     {TR_CONFIG_HOUSES_DONT_EXPAND_INTO_GARDENS, "住宅擴建不會覆蓋到花園"},
     {TR_CONFIG_ROAMERS_DONT_SKIP_CORNERS, "間接目標行人不會跳過角落"},
     {TR_CONFIG_SHOW_MAX_POSSIBLE_PROSPERITY, "顯示目前住房可獲得的最高繁榮評比"},
-    {TR_HOTKEY_TITLE, "Augustus 熱鍵配置"},
+    {TR_HOTKEY_TITLE, "tiberius 熱鍵配置"},
     {TR_HOTKEY_LABEL, "熱鍵"},
     {TR_HOTKEY_ALTERNATIVE_LABEL, "可替代鍵"},
     {TR_HOTKEY_HEADER_ARROWS, "方向鍵"},
@@ -425,7 +425,7 @@ static translation_string all_strings[] = {
     {TR_OVERLAY_ROADS, "道    路" },
     {TR_NO_EXTRA_ASSETS_TITLE, "無法載入額外資源" },
     {TR_NO_EXTRA_ASSETS_MESSAGE,
-        "無法載入Augustus額外資源。\n"
+        "無法載入Tiberius額外資源。\n"
         "原因可能是『assets』目錄缺失或版本老舊。\n"
         "請確保『assets』目錄下的檔案為最新版，可從Github上下載。" },
     {TR_WARNING_WATER_NEEDED_FOR_LIGHTHOUSE, "燈塔必須臨水建立"},
@@ -590,9 +590,9 @@ static translation_string all_strings[] = {
     {TR_WINDOW_FIGURE_TOURIST, "該遊客已消費："},
     {TR_FIGURE_TYPE_TOURIST,  "遊客"},
     {TR_SAVEGAME_LARGER_VERSION_TITLE, "存檔版本不相容" },
-    {TR_SAVEGAME_LARGER_VERSION_MESSAGE, "即將載入的存檔出自Augustus較新版本。\n請更新Augustus至最新版。" },
+    {TR_SAVEGAME_LARGER_VERSION_MESSAGE, "即將載入的存檔出自Tiberius較新版本。\n請更新Tiberius至最新版。" },
     {TR_SAVEGAME_NOT_ABLE_TO_SAVE_TITLE, "無法儲存遊戲" },
-    {TR_SAVEGAME_NOT_ABLE_TO_SAVE_MESSAGE, "無法儲存遊戲。\n原因可能是凱撒大帝3存檔所在資料夾需要管理員許可權。\n請將凱撒大帝3資料夾轉移至無需管理員許可權的路徑，或者以管理員身份執行Augustus（不推薦）。" },
+    {TR_SAVEGAME_NOT_ABLE_TO_SAVE_MESSAGE, "無法儲存遊戲。\n原因可能是凱撒大帝3存檔所在資料夾需要管理員許可權。\n請將凱撒大帝3資料夾轉移至無需管理員許可權的路徑，或者以管理員身份執行Tiberius（不推薦）。" },
     {TR_BUILDING_COLONNADE, "柱   廊" },
     {TR_BUILDING_LARARIUM, "神   龕" },
     {TR_WINDOW_BUILDING_LARARIUM_DESC, "這座小型聖祠旨在供奉家庭守護神拉列斯-羅馬人的祖靈。在這裡可以進行小型獻祭和祈禱。"},

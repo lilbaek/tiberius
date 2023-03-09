@@ -82,8 +82,8 @@ static void write_log(void *userdata, int category, SDL_LogPriority priority, co
 static void setup_logging(void)
 {
     // On some platforms (vita, android), not removing the file will not empty it when reopening for writing
-    file_remove("augustus-log.txt");
-    log_file = file_open("augustus-log.txt", "wt");
+    file_remove("tiberius-log.txt");
+    log_file = file_open("tiberius-log.txt", "wt");
     SDL_LogSetOutputFunction(write_log, NULL);
 }
 
@@ -445,7 +445,7 @@ static const char *ask_for_data_dir(int again)
 #else
     if (again) {
         int result = tinyfd_messageBox("Wrong folder selected",
-            "Augustus requires the original files from Caesar 3 to run.\n\n"
+            "tiberius requires the original files from Caesar 3 to run.\n\n"
             "The selected folder is not a proper Caesar 3 folder.\n\n"
             "Press OK to select another folder or Cancel to exit.",
             "okcancel", "warning", 1);
@@ -514,27 +514,27 @@ static int pre_init(const char *custom_data_dir)
 #elif defined(__vita__)
     SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
         "Error",
-        "Augustus requires the original files from Caesar 3 to run.\n\n"
+        "tiberius requires the original files from Caesar 3 to run.\n\n"
         "Please add the files to:\n\n"
         VITA_PATH_PREFIX,
         NULL);
 #else
     SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
-        "Augustus requires the original files from Caesar 3 to run.",
-        "Move the Augustus executable to the directory containing an existing "
-        "Caesar 3 installation, or run:\naugustus path-to-c3-directory",
+        "tiberius requires the original files from Caesar 3 to run.",
+        "Move the tiberius executable to the directory containing an existing "
+        "Caesar 3 installation, or run:\ntiberius path-to-c3-directory",
         NULL);
 #endif
 
     return 0;
 }
 
-static void setup(const augustus_args *args)
+static void setup(const Tiberius_args *args)
 {
     system_setup_crash_handler();
     setup_logging();
 
-    SDL_Log("Augustus version %s", system_version());
+    SDL_Log("tiberius version %s", system_version());
 
     if (!init_sdl()) {
         SDL_Log("Exiting: SDL init failed");
@@ -590,7 +590,7 @@ static void setup(const augustus_args *args)
 
 int main(int argc, char **argv)
 {
-    augustus_args args;
+    Tiberius_args args;
     platform_parse_arguments(argc, argv, &args);
 
     setup(&args);

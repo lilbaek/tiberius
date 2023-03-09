@@ -5,7 +5,7 @@
 #include "type.h"
 
 
-augustus_building_properties_mapping augustus_building_properties[] = {
+Tiberius_building_properties_mapping Tiberius_building_properties[] = {
     {BUILDING_ROADBLOCK, { 1, 1, 0, 0, 0 }, "Logistics", 0},
     {BUILDING_WORKCAMP, { 3, 0, 0, 0, 0 }, "Logistics", "Workcamp Central"},
     {BUILDING_GRAND_TEMPLE_CERES, { 7, 1, 0, 0, 0 }, "Religion", "Ceres Complex Off"},
@@ -76,18 +76,18 @@ augustus_building_properties_mapping augustus_building_properties[] = {
     {BUILDING_CITY_MINT, { 3, 0, 0, 0, 0 }, "Administration", "City_Mint_ON"}
 };
 
-#define AUGUSTUS_BUILDINGS (sizeof(augustus_building_properties) / sizeof(augustus_building_properties_mapping))
+#define Tiberius_BUILDINGS (sizeof(Tiberius_building_properties) / sizeof(Tiberius_building_properties_mapping))
 
-void init_augustus_building_properties(void)
+void init_Tiberius_building_properties(void)
 {
-    for (int i = 0; i < AUGUSTUS_BUILDINGS; ++i) {
-        if (augustus_building_properties[i].asset_image_id) {
-            augustus_building_properties[i].properties.image_group =
-                assets_get_image_id(augustus_building_properties[i].asset_name,
-                    augustus_building_properties[i].asset_image_id);
+    for (int i = 0; i < Tiberius_BUILDINGS; ++i) {
+        if (Tiberius_building_properties[i].asset_image_id) {
+            Tiberius_building_properties[i].properties.image_group =
+                assets_get_image_id(Tiberius_building_properties[i].asset_name,
+                    Tiberius_building_properties[i].asset_image_id);
         } else {
-            augustus_building_properties[i].properties.image_group =
-                assets_get_group_id(augustus_building_properties[i].asset_name);
+            Tiberius_building_properties[i].properties.image_group =
+                assets_get_group_id(Tiberius_building_properties[i].asset_name);
         }
     }
 }
@@ -266,9 +266,9 @@ const building_properties *building_properties_for_type(building_type type)
         return &properties[0];
     }
     if (type >= BUILDING_ROADBLOCK || is_vanilla_building_with_changed_properties(type)) {
-        for (int i = 0; i < AUGUSTUS_BUILDINGS; ++i) {
-            if (augustus_building_properties[i].type == type) {
-                return &augustus_building_properties[i].properties;
+        for (int i = 0; i < Tiberius_BUILDINGS; ++i) {
+            if (Tiberius_building_properties[i].type == type) {
+                return &Tiberius_building_properties[i].properties;
             }
         }
     }

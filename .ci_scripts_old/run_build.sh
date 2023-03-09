@@ -16,12 +16,12 @@ case "$BUILD_TARGET" in
 	make -j4
 	make install
 	echo "Creating disk image"
-	hdiutil create -volname Augustus -srcfolder augustus.app -ov -format UDZO augustus.dmg
+	hdiutil create -volname tiberius -srcfolder tiberius.app -ov -format UDZO tiberius.dmg
 	if [[ "$GITHUB_REF" =~ ^refs/tags/v ]]
 	then
-		zip -r augustus.zip augustus.dmg maps manual
+		zip -r tiberius.zip tiberius.dmg maps manual
 	else
-		zip -r augustus.zip augustus.dmg 	
+		zip -r tiberius.zip tiberius.dmg
 	fi
 	;;
 "appimage")
@@ -34,9 +34,9 @@ case "$BUILD_TARGET" in
 	./.ci_scripts/package_appimage.sh
 	if [[ "$GITHUB_REF" =~ ^refs/tags/v ]]	
 	then
-		zip -r augustus.zip . -i augustus.AppImage maps manual
+		zip -r tiberius.zip . -i tiberius.AppImage maps manual
 	else
-		zip -r augustus.zip . -i augustus.AppImage	
+		zip -r tiberius.zip . -i tiberius.AppImage
 	fi
 	;;
 "linux")
@@ -51,14 +51,14 @@ case "$BUILD_TARGET" in
 	cd build && make -j4
 	if [[ "$GITHUB_REF" =~ ^refs/tags/v ]]
 	then
-		zip -r augustus.zip augustus assets maps manual
+		zip -r tiberius.zip tiberius assets maps manual
 	else
-		zip -r augustus.zip augustus
+		zip -r tiberius.zip tiberius
 	fi
 	;;
 "android")
 	cd android
-	if [ ! -f augustus.keystore ]
+	if [ ! -f tiberius.keystore ]
 	then
 		COMMAND=assembleDebug
 	else
@@ -66,9 +66,9 @@ case "$BUILD_TARGET" in
 	fi
 	echo "Running ./gradlew $COMMAND"
 	TERM=dumb ./gradlew $COMMAND
-	if [ -f augustus/build/outputs/apk/release/augustus-release.apk ]
+	if [ -f tiberius/build/outputs/apk/release/tiberius-release.apk ]
 	then
-		cp augustus/build/outputs/apk/release/augustus-release.apk ../build/augustus.apk
+		cp tiberius/build/outputs/apk/release/tiberius-release.apk ../build/tiberius.apk
 	fi
 	;;
 "emscripten")

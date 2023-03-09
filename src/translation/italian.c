@@ -30,7 +30,7 @@ static translation_string all_strings[] = {
     {TR_CONFIG_ARE_YOU_SURE, "Ripristinare predefiniti?"},
     {TR_CONFIG_YOU_WILL_LOSE_YOUR_CONFIGS, "Perderai tutte le configurazioni personalizzate."},
     {TR_CONFIG_YOU_WILL_LOSE_YOUR_HOTKEYS, "Perderai tutte le scorciatoie salvate."},
-    {TR_CONFIG_TITLE, "Opzioni di configurazione di Augustus"},
+    {TR_CONFIG_TITLE, "Opzioni di configurazione di tiberius"},
     {TR_CONFIG_HEADER_GENERAL, "Impostazioni generali"},
     {TR_CONFIG_HEADER_UI_CHANGES, "Interfaccia utente"},
     {TR_CONFIG_HEADER_GAMEPLAY_CHANGES, "Difficoltà"},
@@ -107,7 +107,7 @@ static translation_string all_strings[] = {
     {TR_CONFIG_SHOW_MAX_POSSIBLE_PROSPERITY, "Visualizzazione del valore massimo di prosperità raggiungibile con l'alloggiamento attuale"},
     {TR_CONFIG_AUTO_KILL_ANIMALS, "I cittadini uccideranno automaticamente animali innocui"},
     {TR_CONFIG_SHOW_ROAMING_PATH, "Anteprima dei sentieri percorsi dai passeggiatori"},
-    {TR_HOTKEY_TITLE, "Configurazione scorciatoie da tastiera Augustus"},
+    {TR_HOTKEY_TITLE, "Configurazione scorciatoie da tastiera tiberius"},
     {TR_HOTKEY_LABEL, "Tasto"},
     {TR_HOTKEY_ALTERNATIVE_LABEL, "Alternativa"},
     {TR_HOTKEY_HEADER_ARROWS, "Pulsanti frecce"},
@@ -437,7 +437,7 @@ static translation_string all_strings[] = {
     {TR_OVERLAY_ROADS, "Strade"},
     {TR_NO_EXTRA_ASSETS_TITLE, "Gli asset aggiuntivi non sono stati caricati"},
     {TR_NO_EXTRA_ASSETS_MESSAGE,
-        "Gli asset aggiuntivi di Augustus non sono stati caricati.\n"
+        "Gli asset aggiuntivi di tiberius non sono stati caricati.\n"
         "Questo può dipendere dall'assenza della cartella 'assets'.\n"
         "Assicurati di avere la cartella 'assets' più recente, o ottienila da Github."},
     {TR_WARNING_WATER_NEEDED_FOR_LIGHTHOUSE, "Il faro deve essere posizionato vicino all'acqua"},
@@ -608,7 +608,7 @@ static translation_string all_strings[] = {
     {TR_WINDOW_FIGURE_TOURIST, "Questo viaggiatore ha speso: "},
     {TR_FIGURE_TYPE_TOURIST, "Viaggiatore"},
     {TR_SAVEGAME_LARGER_VERSION_TITLE, "Versione salvataggio non compatibile"},
-    {TR_SAVEGAME_LARGER_VERSION_MESSAGE, "La partita che stai cercando di caricare è per una versione di Augustus più recente.\nAggiorna Augustus alla versione più recente."},
+    {TR_SAVEGAME_LARGER_VERSION_MESSAGE, "La partita che stai cercando di caricare è per una versione di tiberius più recente.\nAggiorna tiberius alla versione più recente."},
     {TR_SAVEGAME_NOT_ABLE_TO_SAVE_TITLE, "Impossibile salvare il gioco"},
     {TR_SAVEGAME_NOT_ABLE_TO_SAVE_MESSAGE, "Non è stato possibile salvare il gioco.\nPotrebbe essere dovuto al fatto che la cartella in cui Caesar 3 conserva i salvataggi richiede l'accesso come amministratore.\nPosiziona la cartella di Caesar 3 dove non sono richiesti i privilegi di amministratore o esegui come amministratore (non consigliato)."},
     {TR_BUILDING_COLONNADE, "Colonnato"},
@@ -853,7 +853,7 @@ static translation_string all_strings[] = {
     {TR_EDITOR_CHOOSE_CUSTOM_EMPIRE, "Scegli impero personalizzato"},
     {TR_EDITOR_CUSTOM_EMPIRE_TITLE, "Caricamento impero"},
     {TR_EDITOR_UNABLE_TO_LOAD_EMPIRE_TITLE, "Impossibile caricare impero personalizzato"},
-    {TR_EDITOR_UNABLE_TO_LOAD_EMPIRE_MESSAGE, "Controlla il file augustus-log.txt Nella tua cartella Agustus per maggiori dettagli."},
+    {TR_EDITOR_UNABLE_TO_LOAD_EMPIRE_MESSAGE, "Controlla il file tiberius-log.txt Nella tua cartella Agustus per maggiori dettagli."},
     {TR_EDITOR_SHORT_ROUTE_TEXT, "rt"}, //contesto?
     {TR_EDITOR_REFRESH_EMPIRE, "Aggiorna (F5)"},
     {TR_EDITOR_MAX_WAGES, "Fino a"},
