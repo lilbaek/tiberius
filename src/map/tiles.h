@@ -1,6 +1,13 @@
 #ifndef MAP_TILES_H
 #define MAP_TILES_H
 
+
+#include "core/sds.h"
+
+// TODO: Move me somewhere else
+sds get_image_name(char *prefix, int index);
+int get_terrain_image_id(sds image_name);
+
 void map_tiles_update_all_rocks(void);
 
 void map_tiles_update_region_trees(int x_min, int y_min, int x_max, int y_max);
@@ -54,4 +61,7 @@ void map_tiles_remove_entry_exit_flags(void);
 
 void map_tiles_update_all(void);
 
+void map_tiles_update_all_trees();
+
+void map_tiles_update_all_shrubs();
 #endif // MAP_TILES_H

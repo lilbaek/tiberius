@@ -8,6 +8,7 @@
 #include "input/scroll.h"
 #include "map/terrain.h"
 #include "scenario/property.h"
+#include "map/tiles.h"
 
 #define MAX_TILES 4
 
@@ -118,7 +119,7 @@ static void draw_access_ramp(const map_tile *tile, int x, int y)
 {
     int orientation;
     if (editor_tool_can_place_access_ramp(tile, &orientation)) {
-        int image_id = image_group(GROUP_TERRAIN_ACCESS_RAMP) + orientation;
+        int image_id = get_terrain_image_id(get_image_name("access_ramp_", orientation + 1));
         draw_building_image(image_id, x, y);
     } else {
         int blocked[4] = {1, 1, 1, 1};

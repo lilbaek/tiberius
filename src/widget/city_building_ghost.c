@@ -1210,7 +1210,7 @@ static void draw_grid_tile(int x, int y, int grid_offset)
 {
     static int image_id = 0;
     if (!image_id) {
-        image_id = assets_get_image_id("UI", "Grid_Full");
+        image_id = assets_get_image_id("UI", GRID_IMAGE);
     }
     if (map_terrain_is(grid_offset, TERRAIN_BUILDING) || map_terrain_is(grid_offset, TERRAIN_ROCK) ||
         map_terrain_is(grid_offset, TERRAIN_ACCESS_RAMP) || map_terrain_is(grid_offset, TERRAIN_ELEVATION) ||

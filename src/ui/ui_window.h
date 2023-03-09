@@ -13,6 +13,8 @@ void ui_render();
 void ui_font_standard();
 void ui_font_large();
 void ui_font_large_bold();
+void ui_font_extra_large();
+void ui_font_extra_large_bold();
 struct nk_context* ui_context(void);
 
 #endif

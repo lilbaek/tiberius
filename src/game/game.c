@@ -29,7 +29,6 @@
 #include "sound/system.h"
 #include "translation/translation.h"
 #include "window/editor/map.h"
-#include "window/logo.h"
 #include "window/main_menu.h"
 #include "ui/ui_window.h"
 

@@ -16,6 +16,7 @@
 #include "map/sprite.h"
 #include "map/terrain.h"
 #include "map/tiles.h"
+#include "assets/assets.h"
 
 void map_building_tiles_add_remove(int building_id, int x, int y, int size, int image_id, int terrain_to_add, int terrain_to_remove)
 {
@@ -191,7 +192,7 @@ void map_building_tiles_remove(int building_id, int x, int y)
                 map_tiles_set_water(x + dx, y + dy);
             } else {
                 map_image_set(grid_offset,
-                    image_group(GROUP_TERRAIN_UGLY_GRASS) +
+                              assets_get_image_id("terrain", "ugly_grass_01") +
                     (map_random_get(grid_offset) & 7));
                 map_terrain_remove(grid_offset, TERRAIN_CLEARABLE & ~TERRAIN_HIGHWAY);
             }

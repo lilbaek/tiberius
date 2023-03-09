@@ -115,13 +115,13 @@ static void clear_rock_image(int x, int y, int grid_offset) {
 /*
  * Returns image id from terrain group. Frees image_name automatically
  */
-static int get_terrain_image_id(sds image_name) {
+int get_terrain_image_id(sds image_name) {
     int i = assets_get_image_id("terrain", image_name);
     sdsfree(image_name);
     return i;
 }
 
-static sds get_image_name(char *prefix, int index) {
+sds get_image_name(char *prefix, int index) {
     sds image_name = sdsnew(prefix);
     if (index < 10) {
         image_name = sdscatprintf(image_name, "0%d", index);
@@ -1353,14 +1353,15 @@ void map_tiles_remove_entry_exit_flags(void) {
 }
 
 void map_tiles_update_all(void) {
+
     map_tiles_remove_entry_exit_flags();
 
     map_tiles_update_all_elevation();
     map_tiles_update_all_water();
     map_tiles_update_all_earthquake();
     map_tiles_update_all_rocks();
-    foreach_map_tile(set_tree_image);
-    foreach_map_tile(set_shrub_image);
+    map_tiles_update_all_trees();
+    map_tiles_update_all_shrubs();
     map_tiles_update_all_gardens();
 
     map_tiles_add_entry_exit_flags();
@@ -1374,3 +1375,7 @@ void map_tiles_update_all(void) {
     map_tiles_update_all_walls();
     map_tiles_update_all_aqueducts(0);
 }
+
+void map_tiles_update_all_shrubs() { foreach_map_tile(set_shrub_image); }
+
+void map_tiles_update_all_trees() { foreach_map_tile(set_tree_image); }

@@ -414,7 +414,7 @@ static void draw_footprint(int x, int y, int grid_offset)
         scale <= 2.0f) {
         static int grid_id = 0;
         if (!grid_id) {
-            grid_id = assets_get_image_id("UI", "Grid_Full");
+            grid_id = assets_get_image_id("UI", GRID_IMAGE);
         }
         image_draw(grid_id, x, y, COLOR_GRID, scale);
     }

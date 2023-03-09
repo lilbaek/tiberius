@@ -43,36 +43,24 @@ static void draw_version_string(void) {
 
     string_copy(string_from_ascii(system_version()), version_string + version_prefix_length, 99);
 
-    int text_width = text_get_width(version_string, FONT_NORMAL_GREEN);
+    int text_width = text_get_width(version_string, FONT_NORMAL_WHITE);
     int width = calc_value_in_step(text_width + 20, 16);
 
-    inner_panel_draw(20, text_y, width / 16, 2);
-    text_draw_centered(version_string, 20, text_y + 11, width, FONT_NORMAL_GREEN, 0);
+    text_draw_centered(version_string, 20, text_y + 11, width, FONT_NORMAL_WHITE, 0);
 }
 
 static void draw_background(void) {
     graphics_reset_dialog();
     graphics_reset_clip_rectangle();
-    //image_draw_fullscreen_background(image_group(GROUP_INTERMEZZO_BACKGROUND));
-
-    /*
-    if (!window_is(WINDOW_FILE_DIALOG)) {
-        graphics_in_dialog();
-        outer_panel_draw(162, 32, 20, 22);
-        if (!data.logo_image_id) {
-            data.logo_image_id = assets_get_image_id("UI", "Main Menu Banner");
-        }
-        image_draw(data.logo_image_id, 176, 50, COLOR_MASK_NONE, SCALE_NONE);
-        graphics_reset_dialog();
-        draw_version_string();
-    }*/
+    image_draw_fullscreen_background(assets_get_image_id("mainmenu", "start-screen"));
+    draw_version_string();
 }
 
 static void draw_foreground(void) {
     graphics_in_dialog();
     struct nk_context *ctx = ui_context();
     ui_font_large_bold();
-    if (nk_begin(ctx, "Demo", nk_recti(screen_dialog_offset_x() + 192, screen_dialog_offset_y() + 70, 260, 303),
+    if (nk_begin(ctx, "", nk_recti(screen_dialog_offset_x() + 192, screen_dialog_offset_y() + 70, 260, 303),
                  NK_WINDOW_BORDER | NK_WINDOW_NO_SCROLLBAR)) {
         nk_layout_row_begin(ctx, NK_STATIC, 45, 1);
         {

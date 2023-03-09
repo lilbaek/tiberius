@@ -2,16 +2,16 @@
 <!DOCTYPE assetlist>
 <assetlist name="terrain">
     <!-- Files related to access_ramp -->
-    <image id="access_ramp_01" width="118" height="60" isometric="true">
+    <image id="access_ramp_01" width="236" height="120" isometric="true">
       <layer src="access_ramp_01"/>
     </image>
-    <image id="access_ramp_02" width="118" height="76" isometric="true">
+    <image id="access_ramp_02" width="236" height="152" isometric="true">
       <layer src="access_ramp_02"/>
     </image>
-    <image id="access_ramp_03" width="118" height="75" isometric="true">
+    <image id="access_ramp_03" width="236" height="150" isometric="true">
       <layer src="access_ramp_03"/>
     </image>
-    <image id="access_ramp_04" width="118" height="60" isometric="true">
+    <image id="access_ramp_04" width="236" height="120" isometric="true">
       <layer src="access_ramp_04"/>
     </image>
     <!-- Files related to earthquake -->
@@ -78,179 +78,179 @@
       <layer group="this" image="earthquake_30" x="0" y="0"/>
     </image>
     <!-- Files related to elevation -->
-    <image id="elevation_01" width="58" height="45" isometric="true">
+    <image id="elevation_01" width="116" height="90" isometric="true">
       <layer src="elevation_01"/>
     </image>
-    <image id="elevation_02" width="58" height="45" isometric="true">
+    <image id="elevation_02" width="116" height="90" isometric="true">
       <layer src="elevation_02"/>
     </image>
-    <image id="elevation_03" width="58" height="36" isometric="true">
+    <image id="elevation_03" width="116" height="72" isometric="true">
       <layer src="elevation_03"/>
     </image>
-    <image id="elevation_04" width="58" height="42" isometric="true">
+    <image id="elevation_04" width="116" height="84" isometric="true">
       <layer src="elevation_04"/>
     </image>
-    <image id="elevation_05" width="58" height="35" isometric="true">
+    <image id="elevation_05" width="116" height="70" isometric="true">
       <layer src="elevation_05"/>
     </image>
-    <image id="elevation_06" width="58" height="31" isometric="true">
+    <image id="elevation_06" width="116" height="62" isometric="true">
       <layer src="elevation_06"/>
     </image>
-    <image id="elevation_07" width="58" height="32" isometric="true">
+    <image id="elevation_07" width="116" height="64" isometric="true">
       <layer src="elevation_07"/>
     </image>
-    <image id="elevation_08" width="58" height="34" isometric="true">
+    <image id="elevation_08" width="116" height="68" isometric="true">
       <layer src="elevation_08"/>
     </image>
-    <image id="elevation_09" width="58" height="42" isometric="true">
+    <image id="elevation_09" width="116" height="84" isometric="true">
       <layer src="elevation_09"/>
     </image>
-    <image id="elevation_10" width="58" height="47" isometric="true">
+    <image id="elevation_10" width="116" height="94" isometric="true">
       <layer src="elevation_10"/>
     </image>
-    <image id="elevation_11" width="58" height="44" isometric="true">
+    <image id="elevation_11" width="116" height="88" isometric="true">
       <layer src="elevation_11"/>
     </image>
-    <image id="elevation_12" width="58" height="39" isometric="true">
+    <image id="elevation_12" width="116" height="78" isometric="true">
       <layer src="elevation_12"/>
     </image>
-    <image id="elevation_13" width="58" height="41" isometric="true">
+    <image id="elevation_13" width="116" height="82" isometric="true">
       <layer src="elevation_13"/>
     </image>
-    <image id="elevation_14" width="58" height="37" isometric="true">
+    <image id="elevation_14" width="116" height="74" isometric="true">
       <layer src="elevation_14"/>
     </image>
-    <image id="elevation_15" width="58" height="32" isometric="true">
+    <image id="elevation_15" width="116" height="64" isometric="true">
       <layer src="elevation_15"/>
     </image>
-    <image id="elevation_16" width="58" height="34" isometric="true">
+    <image id="elevation_16" width="116" height="68" isometric="true">
       <layer src="elevation_16"/>
     </image>
-    <image id="elevation_17" width="58" height="45" isometric="true">
+    <image id="elevation_17" width="116" height="90" isometric="true">
       <layer src="elevation_17"/>
     </image>
-    <image id="elevation_18" width="58" height="33" isometric="true">
+    <image id="elevation_18" width="116" height="66" isometric="true">
       <layer src="elevation_18"/>
     </image>
-    <image id="elevation_19" width="58" height="35" isometric="true">
+    <image id="elevation_19" width="116" height="70" isometric="true">
       <layer src="elevation_19"/>
     </image>
-    <image id="elevation_20" width="58" height="35" isometric="true">
+    <image id="elevation_20" width="116" height="70" isometric="true">
       <layer src="elevation_20"/>
     </image>
-    <image id="elevation_21" width="58" height="33" isometric="true">
+    <image id="elevation_21" width="116" height="66" isometric="true">
       <layer src="elevation_21"/>
     </image>
-    <image id="elevation_22" width="58" height="31" isometric="true">
+    <image id="elevation_22" width="116" height="62" isometric="true">
       <layer src="elevation_22"/>
     </image>
-    <image id="elevation_23" width="58" height="44" isometric="true">
+    <image id="elevation_23" width="116" height="88" isometric="true">
       <layer src="elevation_23"/>
     </image>
-    <image id="elevation_24" width="58" height="44" isometric="true">
+    <image id="elevation_24" width="116" height="88" isometric="true">
       <layer src="elevation_24"/>
     </image>
-    <image id="elevation_25" width="58" height="38" isometric="true">
+    <image id="elevation_25" width="116" height="76" isometric="true">
       <layer src="elevation_25"/>
     </image>
-    <image id="elevation_26" width="58" height="37" isometric="true">
+    <image id="elevation_26" width="116" height="74" isometric="true">
       <layer src="elevation_26"/>
     </image>
-    <image id="elevation_27" width="58" height="43" isometric="true">
+    <image id="elevation_27" width="116" height="86" isometric="true">
       <layer src="elevation_27"/>
     </image>
-    <image id="elevation_28" width="58" height="40" isometric="true">
+    <image id="elevation_28" width="116" height="80" isometric="true">
       <layer src="elevation_28"/>
     </image>
-    <image id="elevation_29" width="58" height="37" isometric="true">
+    <image id="elevation_29" width="116" height="74" isometric="true">
       <layer src="elevation_29"/>
     </image>
-    <image id="elevation_30" width="58" height="35" isometric="true">
+    <image id="elevation_30" width="116" height="70" isometric="true">
       <layer src="elevation_30"/>
     </image>
-    <image id="elevation_31" width="58" height="41" isometric="true">
+    <image id="elevation_31" width="116" height="82" isometric="true">
       <layer src="elevation_31"/>
     </image>
-    <image id="elevation_32" width="58" height="37" isometric="true">
+    <image id="elevation_32" width="116" height="74" isometric="true">
       <layer src="elevation_32"/>
     </image>
-    <image id="elevation_33" width="58" height="37" isometric="true">
+    <image id="elevation_33" width="116" height="74" isometric="true">
       <layer src="elevation_33"/>
     </image>
-    <image id="elevation_34" width="58" height="35" isometric="true">
+    <image id="elevation_34" width="116" height="70" isometric="true">
       <layer src="elevation_34"/>
     </image>
-    <image id="elevation_35" width="58" height="35" isometric="true">
+    <image id="elevation_35" width="116" height="70" isometric="true">
       <layer src="elevation_35"/>
     </image>
-    <image id="elevation_36" width="58" height="35" isometric="true">
+    <image id="elevation_36" width="116" height="70" isometric="true">
       <layer src="elevation_36"/>
     </image>
-    <image id="elevation_37" width="58" height="30" isometric="true">
+    <image id="elevation_37" width="116" height="60" isometric="true">
       <layer src="elevation_37"/>
     </image>
-    <image id="elevation_38" width="58" height="30" isometric="true">
+    <image id="elevation_38" width="116" height="60" isometric="true">
       <layer src="elevation_38"/>
     </image>
-    <image id="elevation_39" width="58" height="30" isometric="true">
+    <image id="elevation_39" width="116" height="60" isometric="true">
       <layer src="elevation_39"/>
     </image>
-    <image id="elevation_40" width="58" height="30" isometric="true">
+    <image id="elevation_40" width="116" height="60" isometric="true">
       <layer src="elevation_40"/>
     </image>
-    <image id="elevation_41" width="58" height="30" isometric="true">
+    <image id="elevation_41" width="116" height="60" isometric="true">
       <layer src="elevation_41"/>
     </image>
-    <image id="elevation_42" width="58" height="30" isometric="true">
+    <image id="elevation_42" width="116" height="60" isometric="true">
       <layer src="elevation_42"/>
     </image>
-    <image id="elevation_43" width="58" height="30" isometric="true">
+    <image id="elevation_43" width="116" height="60" isometric="true">
       <layer src="elevation_43"/>
     </image>
-    <image id="elevation_44" width="58" height="30" isometric="true">
+    <image id="elevation_44" width="116" height="60" isometric="true">
       <layer src="elevation_44"/>
     </image>
     <!-- Files related to elevation_rock -->
-    <image id="elevation_rock_01" width="58" height="35" isometric="true">
+    <image id="elevation_rock_01" width="116" height="70" isometric="true">
       <layer src="elevation_rock_01"/>
     </image>
-    <image id="elevation_rock_02" width="58" height="35" isometric="true">
+    <image id="elevation_rock_02" width="116" height="70" isometric="true">
       <layer src="elevation_rock_02"/>
     </image>
-    <image id="elevation_rock_03" width="58" height="37" isometric="true">
+    <image id="elevation_rock_03" width="116" height="74" isometric="true">
       <layer src="elevation_rock_03"/>
     </image>
-    <image id="elevation_rock_04" width="58" height="37" isometric="true">
+    <image id="elevation_rock_04" width="116" height="74" isometric="true">
       <layer src="elevation_rock_04"/>
     </image>
-    <image id="elevation_rock_05" width="58" height="37" isometric="true">
+    <image id="elevation_rock_05" width="116" height="74" isometric="true">
       <layer src="elevation_rock_05"/>
     </image>
-    <image id="elevation_rock_06" width="58" height="35" isometric="true">
+    <image id="elevation_rock_06" width="116" height="70" isometric="true">
       <layer src="elevation_rock_06"/>
     </image>
-    <image id="elevation_rock_07" width="58" height="35" isometric="true">
+    <image id="elevation_rock_07" width="116" height="70" isometric="true">
       <layer src="elevation_rock_07"/>
     </image>
-    <image id="elevation_rock_08" width="58" height="35" isometric="true">
+    <image id="elevation_rock_08" width="116" height="70" isometric="true">
       <layer src="elevation_rock_08"/>
     </image>
-    <image id="elevation_rock_09" width="118" height="65" isometric="true">
+    <image id="elevation_rock_09" width="236" height="130" isometric="true">
       <layer src="elevation_rock_09"/>
     </image>
-    <image id="elevation_rock_10" width="118" height="72" isometric="true">
+    <image id="elevation_rock_10" width="236" height="144" isometric="true">
       <layer src="elevation_rock_10"/>
     </image>
-    <image id="elevation_rock_11" width="118" height="76" isometric="true">
+    <image id="elevation_rock_11" width="236" height="152" isometric="true">
       <layer src="elevation_rock_11"/>
     </image>
-    <image id="elevation_rock_12" width="118" height="83" isometric="true">
+    <image id="elevation_rock_12" width="236" height="166" isometric="true">
       <layer src="elevation_rock_12"/>
     </image>
-    <image id="elevation_rock_13" width="178" height="112" isometric="true">
+    <image id="elevation_rock_13" width="356" height="224" isometric="true">
       <layer src="elevation_rock_13"/>
     </image>
-    <image id="elevation_rock_14" width="178" height="108" isometric="true">
+    <image id="elevation_rock_14" width="356" height="216" isometric="true">
       <layer src="elevation_rock_14"/>
     </image>
     <!-- Files related to grass_1 -->
@@ -492,206 +492,203 @@
       <layer group="this" image="grass_2_58" x="0" y="0"/>
     </image>
     <!-- Files related to meadow -->
-    <image id="meadow_01" width="58" height="30" isometric="true">
+    <image id="meadow_01" width="116" height="60" isometric="true">
       <layer src="meadow_01"/>
     </image>
-    <image id="meadow_02" width="58" height="32" isometric="true">
+    <image id="meadow_02" width="116" height="64" isometric="true">
       <layer src="meadow_02"/>
     </image>
-    <image id="meadow_03" width="58" height="31" isometric="true">
+    <image id="meadow_03" width="116" height="62" isometric="true">
       <layer src="meadow_03"/>
     </image>
-    <image id="meadow_04" width="58" height="31" isometric="true">
+    <image id="meadow_04" width="116" height="62" isometric="true">
       <layer src="meadow_04"/>
     </image>
-    <image id="meadow_05" width="58" height="33" isometric="true">
+    <image id="meadow_05" width="116" height="66" isometric="true">
       <layer src="meadow_05"/>
     </image>
-    <image id="meadow_06" width="58" height="32" isometric="true">
+    <image id="meadow_06" width="116" height="64" isometric="true">
       <layer src="meadow_06"/>
     </image>
-    <image id="meadow_07" width="58" height="32" isometric="true">
+    <image id="meadow_07" width="116" height="64" isometric="true">
       <layer src="meadow_07"/>
     </image>
-    <image id="meadow_08" width="58" height="30" isometric="true">
+    <image id="meadow_08" width="116" height="60" isometric="true">
       <layer src="meadow_08"/>
     </image>
-    <image id="meadow_09" width="58" height="32" isometric="true">
+    <image id="meadow_09" width="116" height="64" isometric="true">
       <layer src="meadow_09"/>
     </image>
-    <image id="meadow_10" width="58" height="33" isometric="true">
+    <image id="meadow_10" width="116" height="66" isometric="true">
       <layer src="meadow_10"/>
     </image>
-    <image id="meadow_11" width="58" height="33" isometric="true">
+    <image id="meadow_11" width="116" height="66" isometric="true">
       <layer src="meadow_11"/>
     </image>
-    <image id="meadow_12" width="58" height="32" isometric="true">
+    <image id="meadow_12" width="116" height="64" isometric="true">
       <layer src="meadow_12"/>
     </image>
     <!-- Files related to rock -->
-    <image id="rock_01" width="58" height="30" isometric="true">
+    <image id="rock_01" width="116" height="60" isometric="true">
       <layer src="rock_01"/>
     </image>
-    <image id="rock_02" width="58" height="32" isometric="true">
+    <image id="rock_02" width="116" height="64" isometric="true">
       <layer src="rock_02"/>
     </image>
-    <image id="rock_03" width="58" height="30" isometric="true">
+    <image id="rock_03" width="116" height="60" isometric="true">
       <layer src="rock_03"/>
     </image>
-    <image id="rock_04" width="58" height="34" isometric="true">
+    <image id="rock_04" width="116" height="68" isometric="true">
       <layer src="rock_04"/>
     </image>
-    <image id="rock_05" width="58" height="30" isometric="true">
+    <image id="rock_05" width="116" height="60" isometric="true">
       <layer src="rock_05"/>
     </image>
-    <image id="rock_06" width="58" height="31" isometric="true">
+    <image id="rock_06" width="116" height="62" isometric="true">
       <layer src="rock_06"/>
     </image>
-    <image id="rock_07" width="58" height="30" isometric="true">
+    <image id="rock_07" width="116" height="60" isometric="true">
       <layer src="rock_07"/>
     </image>
-    <image id="rock_08" width="58" height="30" isometric="true">
+    <image id="rock_08" width="116" height="60" isometric="true">
       <layer src="rock_08"/>
     </image>
-    <image id="rock_09" width="118" height="82" isometric="true">
+    <image id="rock_09" width="236" height="164" isometric="true">
       <layer src="rock_09"/>
     </image>
-    <image id="rock_10" width="118" height="68" isometric="true">
+    <image id="rock_10" width="236" height="136" isometric="true">
       <layer src="rock_10"/>
     </image>
-    <image id="rock_11" width="118" height="67" isometric="true">
+    <image id="rock_11" width="236" height="134" isometric="true">
       <layer src="rock_11"/>
     </image>
-    <image id="rock_12" width="118" height="73" isometric="true">
+    <image id="rock_12" width="236" height="146" isometric="true">
       <layer src="rock_12"/>
     </image>
-    <image id="rock_13" width="178" height="117" isometric="true">
+    <image id="rock_13" width="356" height="234" isometric="true">
       <layer src="rock_13"/>
     </image>
-    <image id="rock_14" width="178" height="114" isometric="true">
+    <image id="rock_14" width="356" height="228" isometric="true">
       <layer src="rock_14"/>
     </image>
     <!-- Files related to shrub -->
-    <image id="shrub_01" width="58" height="70" isometric="true">
+    <image id="shrub_01" width="116" height="140" isometric="true">
       <layer src="shrub_01"/>
     </image>
-    <image id="shrub_02" width="58" height="64" isometric="true">
+    <image id="shrub_02" width="116" height="128" isometric="true">
       <layer src="shrub_02"/>
     </image>
-    <image id="shrub_03" width="58" height="56" isometric="true">
+    <image id="shrub_03" width="116" height="112" isometric="true">
       <layer src="shrub_03"/>
     </image>
-    <image id="shrub_04" width="58" height="60" isometric="true">
+    <image id="shrub_04" width="116" height="120" isometric="true">
       <layer src="shrub_04"/>
     </image>
-    <image id="shrub_05" width="58" height="65" isometric="true">
+    <image id="shrub_05" width="116" height="130" isometric="true">
       <layer src="shrub_05"/>
     </image>
-    <image id="shrub_06" width="58" height="47" isometric="true">
+    <image id="shrub_06" width="116" height="94" isometric="true">
       <layer src="shrub_06"/>
     </image>
-    <image id="shrub_07" width="58" height="44" isometric="true">
+    <image id="shrub_07" width="116" height="88" isometric="true">
       <layer src="shrub_07"/>
     </image>
-    <image id="shrub_08" width="58" height="43" isometric="true">
+    <image id="shrub_08" width="116" height="86" isometric="true">
       <layer src="shrub_08"/>
     </image>
     <!-- Files related to tree -->
-    <image id="tree_01" width="58" height="30" isometric="true">
+    <image id="tree_01" width="116" height="60" isometric="true">
       <layer src="tree_01"/>
     </image>
-    <image id="tree_02" width="58" height="31" isometric="true">
+    <image id="tree_02" width="116" height="62" isometric="true">
       <layer src="tree_02"/>
     </image>
-    <image id="tree_03" width="58" height="41" isometric="true">
+    <image id="tree_03" width="116" height="82" isometric="true">
       <layer src="tree_03"/>
     </image>
-    <image id="tree_04" width="58" height="42" isometric="true">
+    <image id="tree_04" width="116" height="84" isometric="true">
       <layer src="tree_04"/>
     </image>
-    <image id="tree_05" width="58" height="37" isometric="true">
+    <image id="tree_05" width="116" height="74" isometric="true">
       <layer src="tree_05"/>
     </image>
-    <image id="tree_06" width="58" height="41" isometric="true">
+    <image id="tree_06" width="116" height="82" isometric="true">
       <layer src="tree_06"/>
     </image>
-    <image id="tree_07" width="58" height="41" isometric="true">
+    <image id="tree_07" width="116" height="82" isometric="true">
       <layer src="tree_07"/>
     </image>
-    <image id="tree_08" width="58" height="30" isometric="true">
+    <image id="tree_08" width="116" height="60" isometric="true">
       <layer src="tree_08"/>
     </image>
-    <image id="tree_09" width="58" height="45" isometric="true">
+    <image id="tree_09" width="116" height="90" isometric="true">
       <layer src="tree_09"/>
     </image>
-    <image id="tree_10" width="58" height="37" isometric="true">
+    <image id="tree_10" width="116" height="74" isometric="true">
       <layer src="tree_10"/>
     </image>
-    <image id="tree_11" width="58" height="30" isometric="true">
+    <image id="tree_11" width="116" height="60" isometric="true">
       <layer src="tree_11"/>
     </image>
-    <image id="tree_12" width="58" height="39" isometric="true">
+    <image id="tree_12" width="116" height="78" isometric="true">
       <layer src="tree_12"/>
     </image>
-    <image id="tree_13" width="58" height="43" isometric="true">
+    <image id="tree_13" width="116" height="86" isometric="true">
       <layer src="tree_13"/>
     </image>
-    <image id="tree_14" width="58" height="44" isometric="true">
+    <image id="tree_14" width="116" height="88" isometric="true">
       <layer src="tree_14"/>
     </image>
-    <image id="tree_15" width="58" height="46" isometric="true">
+    <image id="tree_15" width="116" height="92" isometric="true">
       <layer src="tree_15"/>
     </image>
-    <image id="tree_16" width="58" height="49" isometric="true">
+    <image id="tree_16" width="116" height="98" isometric="true">
       <layer src="tree_16"/>
     </image>
-    <image id="tree_17" width="58" height="41" isometric="true">
+    <image id="tree_17" width="116" height="82" isometric="true">
       <layer src="tree_17"/>
     </image>
-    <image id="tree_18" width="58" height="42" isometric="true">
+    <image id="tree_18" width="116" height="84" isometric="true">
       <layer src="tree_18"/>
     </image>
-    <image id="tree_19" width="58" height="44" isometric="true">
+    <image id="tree_19" width="116" height="88" isometric="true">
       <layer src="tree_19"/>
     </image>
-    <image id="tree_20" width="58" height="40" isometric="true">
+    <image id="tree_20" width="116" height="80" isometric="true">
       <layer src="tree_20"/>
     </image>
-    <image id="tree_21" width="58" height="41" isometric="true">
+    <image id="tree_21" width="116" height="82" isometric="true">
       <layer src="tree_21"/>
     </image>
-    <image id="tree_22" width="58" height="40" isometric="true">
+    <image id="tree_22" width="116" height="80" isometric="true">
       <layer src="tree_22"/>
     </image>
-    <image id="tree_23" width="58" height="42" isometric="true">
+    <image id="tree_23" width="116" height="84" isometric="true">
       <layer src="tree_23"/>
     </image>
-    <image id="tree_24" width="58" height="35" isometric="true">
+    <image id="tree_24" width="116" height="70" isometric="true">
       <layer src="tree_24"/>
     </image>
-    <image id="tree_25" width="58" height="51" isometric="true">
+    <image id="tree_25" width="116" height="102" isometric="true">
       <layer src="tree_25"/>
     </image>
-    <image id="tree_26" width="58" height="40" isometric="true">
+    <image id="tree_26" width="116" height="80" isometric="true">
       <layer src="tree_26"/>
     </image>
-    <image id="tree_27" width="58" height="52" isometric="true">
+    <image id="tree_27" width="116" height="104" isometric="true">
       <layer src="tree_27"/>
     </image>
-    <image id="tree_28" width="58" height="42" isometric="true">
+    <image id="tree_28" width="116" height="84" isometric="true">
       <layer src="tree_28"/>
     </image>
-    <image id="tree_29" width="58" height="43" isometric="true">
+    <image id="tree_29" width="116" height="86" isometric="true">
       <layer src="tree_29"/>
     </image>
-    <image id="tree_30" width="58" height="67" isometric="true">
+    <image id="tree_30" width="116" height="134" isometric="true">
       <layer src="tree_30"/>
     </image>
-    <image id="tree_31" width="58" height="53" isometric="true">
+    <image id="tree_31" width="116" height="106" isometric="true">
       <layer src="tree_31"/>
-    </image>
-    <image id="tree_32" width="58" height="57" isometric="true">
-      <layer src="tree_32"/>
     </image>
     <!-- Files related to ugly_grass -->
     <image id="ugly_grass_01" src="ugly_grass_01"/>

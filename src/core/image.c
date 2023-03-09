@@ -643,6 +643,7 @@ void printFileName(int group, int maxIndex) {
     strncpy(source, data.bitmaps[pImage->bitmapId], 200);
     strcpy(&filename[0], source);
     printf("%s \n", filename);
+    /*
     for (int i = 0; i < maxIndex; ++i) {
         const image *pImage2 = image_get(id + i);
         printf("Index: %d \n", image_group(group) - firstIndex + 1 + i);
@@ -654,7 +655,7 @@ void printFileName(int group, int maxIndex) {
             printf("Top x: %d \n", pImage2->top->x_offset);
             printf("Top Y: %d \n", pImage2->top->y_offset);
         }
-    }
+    }*/
 }
 
 int image_load_climate(int climate_id, int is_editor, int force_reload, int keep_atlas_buffers) {
@@ -756,8 +757,8 @@ int image_load_climate(int climate_id, int is_editor, int force_reload, int keep
 
     data.images_with_tops = 0;
 
-    printFileName(GROUP_TERRAIN_GRASS_1, 5);
-    printFileName(GROUP_TERRAIN_GRASS_2, 5);
+    //printFileName(GROUP_TERRAIN_GRASS_1, 5);
+    //printFileName(GROUP_TERRAIN_GRASS_2, 5);
     return 1;
 }
 

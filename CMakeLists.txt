@@ -287,6 +287,7 @@ set(CORE_FILES
     ${PROJECT_SOURCE_DIR}/src/core/xml_parser.c
     ${PROJECT_SOURCE_DIR}/src/core/zip.c
     ${PROJECT_SOURCE_DIR}/src/core/zlib_helper.c
+    ${PROJECT_SOURCE_DIR}/src/core/game_size.h
 )
 
 set(BUILDING_FILES
@@ -625,8 +626,7 @@ set(WINDOW_FILES
     ${PROJECT_SOURCE_DIR}/src/window/intermezzo.c
     ${PROJECT_SOURCE_DIR}/src/window/intro_video.c
     ${PROJECT_SOURCE_DIR}/src/window/labor_priority.c
-    ${PROJECT_SOURCE_DIR}/src/window/logo.c
-    ${PROJECT_SOURCE_DIR}/src/window/main_menu.c
+        ${PROJECT_SOURCE_DIR}/src/window/main_menu.c
     ${PROJECT_SOURCE_DIR}/src/window/message_dialog.c
     ${PROJECT_SOURCE_DIR}/src/window/message_list.c
     ${PROJECT_SOURCE_DIR}/src/window/military_menu.c

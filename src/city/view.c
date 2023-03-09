@@ -1,20 +1,14 @@
 #include "view.h"
 
-#include "building/construction.h"
 #include "core/calc.h"
-#include "core/config.h"
+#include "core/game_size.h"
 #include "core/direction.h"
-#include "editor/editor.h"
 #include "graphics/menu.h"
 #include "graphics/renderer.h"
 #include "map/grid.h"
 #include "map/image.h"
 #include "widget/minimap.h"
 
-#define TILE_WIDTH_PIXELS 60
-#define TILE_HEIGHT_PIXELS 30
-#define HALF_TILE_WIDTH_PIXELS 30
-#define HALF_TILE_HEIGHT_PIXELS 15
 
 static const int X_DIRECTION_FOR_ORIENTATION[] = {1,  1, -1, -1};
 static const int Y_DIRECTION_FOR_ORIENTATION[] = {1, -1, -1,  1};

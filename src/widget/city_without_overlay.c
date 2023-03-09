@@ -88,7 +88,7 @@ static void init_draw_context(int selected_figure_id, pixel_coordinate *figure_c
             draw_context.advance_water_animation = 1;
         }
     }
-    draw_context.image_id_water_first = image_group(GROUP_TERRAIN_WATER);
+    draw_context.image_id_water_first = assets_get_image_id("terrain", "water_01");
     draw_context.image_id_water_last = 5 + draw_context.image_id_water_first;
     draw_context.selected_figure_id = selected_figure_id;
     draw_context.selected_figure_coord = figure_coord;
@@ -199,7 +199,7 @@ static void draw_footprint(int x, int y, int grid_offset)
     if (!building_id && config_get(CONFIG_UI_SHOW_GRID) && draw_context.scale <= 2.0f) {
         static int grid_id = 0;
         if (!grid_id) {
-            grid_id = assets_get_image_id("UI", "Grid_Full");
+            grid_id = assets_get_image_id("UI", GRID_IMAGE);
         }
         image_draw(grid_id, x, y, COLOR_GRID, draw_context.scale);
     }

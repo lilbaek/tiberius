@@ -19,6 +19,7 @@
 #define NK_INCLUDE_DEFAULT_FONT
 #define NK_IMPLEMENTATION
 #define NK_SDL_RENDERER_IMPLEMENTATION
+#include "platform/file_manager.h"
 #include "nuklear.h"
 #include "nuklear_sdl_renderer.h"
 #include "ui_window.h"
@@ -26,7 +27,7 @@
 /*#define INCLUDE_ALL */
 /*#define INCLUDE_STYLE */
 /*#define INCLUDE_CALCULATOR */
-#define INCLUDE_OVERVIEW
+/*#define INCLUDE_OVERVIEW */
 /*#define INCLUDE_NODE_EDITOR */
 
 #ifdef INCLUDE_ALL
@@ -48,17 +49,17 @@
 #endif
 #ifdef INCLUDE_OVERVIEW
 #include "demo/overview.c"
-#include "platform/file_manager.h"
-
 #endif
 #ifdef INCLUDE_NODE_EDITOR
 #include "demo/node_editor.c"
 #endif
 static struct {
     struct nk_context* ctx;
-    struct nk_font* proggyClean;
-    struct nk_font* robotoRegularLarge;
-    struct nk_font* robotoBoldLarge;
+    struct nk_font* proggy_clean;
+    struct nk_font* roboto_regular_large;
+    struct nk_font* roboto_bold_large;
+    struct nk_font* roboto_regular_xlarge;
+    struct nk_font* roboto_bold_xlarge;
 } ui_data_struct;
 
 void ui_window_setup(SDL_Window *win, SDL_Renderer *renderer)
@@ -76,9 +77,11 @@ void ui_window_setup(SDL_Window *win, SDL_Renderer *renderer)
         /* set up the font atlas and add desired font; note that font sizes are
          * multiplied by font_scale to produce better results at higher DPIs */
         nk_sdl_font_stash_begin(&atlas);
-        ui_data_struct.proggyClean = nk_font_atlas_add_from_file(atlas, platform_file_manager_asset_path("ProggyClean.ttf"), 13 * font_scale, &config);
-        ui_data_struct.robotoRegularLarge = nk_font_atlas_add_from_file(atlas, platform_file_manager_asset_path("Roboto-Regular.ttf"), 20 * font_scale, &config);
-        ui_data_struct.robotoBoldLarge = nk_font_atlas_add_from_file(atlas, platform_file_manager_asset_path("Roboto-Bold.ttf"), 20 * font_scale, &config);
+        ui_data_struct.proggy_clean = nk_font_atlas_add_from_file(atlas, platform_file_manager_asset_path("ProggyClean.ttf"), 13 * font_scale, &config);
+        ui_data_struct.roboto_regular_large = nk_font_atlas_add_from_file(atlas, platform_file_manager_asset_path("Roboto-Regular.ttf"), 20 * font_scale, &config);
+        ui_data_struct.roboto_bold_large = nk_font_atlas_add_from_file(atlas, platform_file_manager_asset_path("Roboto-Bold.ttf"), 20 * font_scale, &config);
+        ui_data_struct.roboto_regular_xlarge = nk_font_atlas_add_from_file(atlas, platform_file_manager_asset_path("Roboto-Regular.ttf"), 28 * font_scale, &config);
+        ui_data_struct.roboto_bold_xlarge = nk_font_atlas_add_from_file(atlas, platform_file_manager_asset_path("Roboto-Bold.ttf"), 28 * font_scale, &config);
         /*nk_font_atlas_add_from_file(atlas, "../../../extra_font/DroidSans.ttf", 14 * font_scale, &config);*/
         /*font = nk_font_atlas_add_from_file(atlas, "../../../extra_font/DroidSans.ttf", 14 * font_scale, &config);*/
         /*font = nk_font_atlas_add_from_file(atlas, "../../../extra_font/Roboto-Regular.ttf", 16 * font_scale, &config);*/
@@ -90,24 +93,35 @@ void ui_window_setup(SDL_Window *win, SDL_Renderer *renderer)
 
         /* this hack makes the font appear to be scaled down to the desired
          * size and is only necessary when font_scale > 1 */
-        ui_data_struct.proggyClean->handle.height /= font_scale;
-        ui_data_struct.robotoRegularLarge->handle.height /= font_scale;
-        ui_data_struct.robotoBoldLarge->handle.height /= font_scale;
-        nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.proggyClean->handle);
+        ui_data_struct.proggy_clean->handle.height /= font_scale;
+        ui_data_struct.roboto_regular_large->handle.height /= font_scale;
+        ui_data_struct.roboto_bold_large->handle.height /= font_scale;
+        ui_data_struct.roboto_regular_xlarge->handle.height /= font_scale;
+        ui_data_struct.roboto_bold_xlarge->handle.height /= font_scale;
+        nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.proggy_clean->handle);
     }
 }
 
 void ui_font_standard() {
-    nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.proggyClean->handle);
+    nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.proggy_clean->handle);
 }
 
 void ui_font_large() {
-    nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.robotoRegularLarge->handle);
+    nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.roboto_regular_large->handle);
 }
 
 void ui_font_large_bold() {
-    nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.robotoBoldLarge->handle);
+    nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.roboto_bold_large->handle);
 }
+
+void ui_font_extra_large() {
+    nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.roboto_regular_xlarge->handle);
+}
+
+void ui_font_extra_large_bold() {
+    nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.roboto_bold_xlarge->handle);
+}
+
 
 void ui_input_begin() {
     nk_input_begin(ui_data_struct.ctx);
@@ -126,7 +140,7 @@ void ui_teardown() {
 }
 
 void ui_prepare() {
-    nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.proggyClean->handle);
+    nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.proggy_clean->handle);
     /* -------------- EXAMPLES ---------------- */
 #ifdef INCLUDE_CALCULATOR
     calculator(ui_data_struct.ctx);
