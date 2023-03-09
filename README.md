@@ -10,4 +10,4 @@ Tiberius is a fork of the [tiberius](https://github.com/Keriew/tiberius) project
 The aim of this project is to provide enhanced, customizable gameplay to using new entities and UI enhancements.
 
 ## Building the game
-- todo
+- See [building](https://github.com/lilbaek/tiberius/blob/main/doc/BUILDING.md)
