@@ -10,6 +10,8 @@
 #include "map/routing.h"
 #include "map/routing_terrain.h"
 #include "map/terrain.h"
+#include "core/textures.h"
+#include "assets/assets.h"
 
 int map_can_place_road_under_aqueduct(int grid_offset)
 {
@@ -66,7 +68,7 @@ int map_can_place_road_under_aqueduct(int grid_offset)
 
 int map_can_place_aqueduct_on_road(int grid_offset)
 {
-    int image_id = map_image_at(grid_offset) - image_group(GROUP_TERRAIN_ROAD);
+    int image_id = map_image_at(grid_offset) - assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_ROAD);
     if (image_id != 0 && image_id != 1 && image_id != 49 && image_id != 50) {
         return 0;
     }

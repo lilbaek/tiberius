@@ -39,6 +39,7 @@
 #include "map/terrain.h"
 #include "map/tiles.h"
 #include "map/water.h"
+#include "core/textures.h"
 
 #define BUILDING_CYCLES 4
 #define MAX_CYCLE_SIZE 10
@@ -223,7 +224,7 @@ static int place_houses(int measure_only, int x_start, int y_start, int x_end, i
                 if (b->id > 0) {
                     items_placed++;
                     map_building_tiles_add(b->id, x, y, 1,
-                        image_group(GROUP_BUILDING_HOUSE_VACANT_LOT), TERRAIN_BUILDING);
+                                           assets_get_image_id(TEXTURE_HOUSING_NAME, TEXTURE_HOUSING_VACANT), TERRAIN_BUILDING);
                     if (!map_terrain_exists_tile_in_radius_with_type(x, y, 1, 2, TERRAIN_ROAD)) {
                         needs_road_warning = 1;
                     }

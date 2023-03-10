@@ -9,6 +9,9 @@ typedef struct {
     int image_group;
     int image_offset;
     int rotation_offset;
+    int building_id;
+    const char* asset_name;
+    const char* asset_image_id;
 } building_properties;
 
 typedef struct {

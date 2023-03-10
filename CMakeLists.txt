@@ -288,6 +288,7 @@ set(CORE_FILES
     ${PROJECT_SOURCE_DIR}/src/core/zip.c
     ${PROJECT_SOURCE_DIR}/src/core/zlib_helper.c
     ${PROJECT_SOURCE_DIR}/src/core/game_size.h
+    ${PROJECT_SOURCE_DIR}/src/core/textures.c
 )
 
 set(BUILDING_FILES

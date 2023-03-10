@@ -525,6 +525,7 @@ static void convert_footprint_tile(buffer *buf, const image *img,
     }
 }
 
+// TODO: Replace 30 with HALF_TILE_WIDTH_PIXELS??? (No, this is loaded from game only??)
 static void convert_isometric_footprint(buffer *buf, const image *img, color_t *dst, int dst_width) {
     int num_tiles = (img->width + 2) / (FOOTPRINT_WIDTH + 2);
     int x_start = (num_tiles - 1) * 30;
@@ -633,6 +634,19 @@ static void release_external_buffers(void) {
     }
 }
 
+/*
+     printFileName(GROUP_BUILDING_HOUSE_TENT, 2);
+    printFileName(GROUP_BUILDING_HOUSE_SHACK, 2);
+    printFileName(GROUP_BUILDING_HOUSE_HOVEL, 2);
+    printFileName(GROUP_BUILDING_HOUSE_CASA, 2);
+    printFileName(GROUP_BUILDING_HOUSE_INSULA_1, 2);
+    printFileName(GROUP_BUILDING_HOUSE_INSULA_2, 2);
+    printFileName(GROUP_BUILDING_HOUSE_VILLA_1, 2);
+    printFileName(GROUP_BUILDING_HOUSE_VILLA_2, 2);
+    printFileName(GROUP_BUILDING_HOUSE_PALACE_1, 2);
+    printFileName(GROUP_BUILDING_HOUSE_PALACE_2, 2);
+    printFileName(GROUP_BUILDING_HOUSE_VACANT_LOT, 2);
+ */
 void printFileName(int group, int maxIndex) {
     char filename[FILE_NAME_MAX] = "";
     int id = image_group(group);
@@ -757,8 +771,8 @@ int image_load_climate(int climate_id, int is_editor, int force_reload, int keep
 
     data.images_with_tops = 0;
 
-    //printFileName(GROUP_TERRAIN_GRASS_1, 5);
-    //printFileName(GROUP_TERRAIN_GRASS_2, 5);
+
+    //printFileName(GROUP_BUILDING_GATEHOUSE, 2);
     return 1;
 }
 

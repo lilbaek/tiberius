@@ -26,6 +26,7 @@
 #include "widget/city_figure.h"
 #include "widget/map_editor_pause_menu.h"
 #include "widget/map_editor_tool.h"
+#include "core/textures.h"
 
 
 static struct {
@@ -52,7 +53,7 @@ static void init_draw_context(void)
         draw_context.last_water_animation_time = now;
         draw_context.advance_water_animation = 1;
     }
-    draw_context.image_id_water_first = assets_get_image_id("terrain", "water_01");
+    draw_context.image_id_water_first = assets_get_image_id(TEXTURE_TERRAIN_NAME, TEXTURE_WATER);
     draw_context.image_id_water_last = 5 + draw_context.image_id_water_first;
     draw_context.scale = city_view_get_scale() / 100.0f;
 }

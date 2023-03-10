@@ -45,6 +45,7 @@
 #include "widget/city_building_ghost.h"
 #include "widget/city_figure.h"
 #include "widget/city_draw_highway.h"
+#include "core/textures.h"
 
 #define OFFSET(x,y) (x + GRID_SIZE * y)
 
@@ -88,7 +89,7 @@ static void init_draw_context(int selected_figure_id, pixel_coordinate *figure_c
             draw_context.advance_water_animation = 1;
         }
     }
-    draw_context.image_id_water_first = assets_get_image_id("terrain", "water_01");
+    draw_context.image_id_water_first = assets_get_image_id(TEXTURE_TERRAIN_NAME, TEXTURE_WATER);
     draw_context.image_id_water_last = 5 + draw_context.image_id_water_first;
     draw_context.selected_figure_id = selected_figure_id;
     draw_context.selected_figure_coord = figure_coord;
@@ -128,14 +129,14 @@ static void draw_roamer_frequency(int x, int y, int grid_offset)
         static const color_t frequency_colors[] = {
             0x663377ff, 0x662266ee, 0x661155dd, 0x660044cc, 0x660033c4, 0x660022bb, 0x660011a4, 0x66000088
         };
-        image_draw(image_group(GROUP_TERRAIN_FLAT_TILE), x, y,
+        image_draw(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE), x, y,
             frequency_colors[travel_frequency - 1], draw_context.scale);
     } else if (travel_frequency == FIGURE_ROAMER_PREVIEW_ENTRY_TILE) {
         image_blend_footprint_color(x, y, COLOR_MASK_RED, draw_context.scale);
     } else if (travel_frequency == FIGURE_ROAMER_PREVIEW_EXIT_TILE) {
         image_blend_footprint_color(x, y, COLOR_MASK_GREEN, draw_context.scale);
     } else if (travel_frequency == FIGURE_ROAMER_PREVIEW_ENTRY_EXIT_TILE) {
-        image_draw_isometric_footprint(image_group(GROUP_TERRAIN_FLAT_TILE),
+        image_draw_isometric_footprint(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE),
             x, y, COLOR_MASK_FOOTPRINT_GHOST, draw_context.scale);
     }
 }
@@ -180,7 +181,7 @@ static void draw_footprint(int x, int y, int grid_offset)
     int image_id = map_image_at(grid_offset);
     if (map_property_is_constructing(grid_offset)) { //&&
         //  !building_is_connectable(building_construction_type())) {
-        image_id = image_group(GROUP_TERRAIN_OVERLAY);
+        image_id = assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_OVERLAY);
     }
     if (draw_context.advance_water_animation &&
         image_id >= draw_context.image_id_water_first &&
@@ -636,19 +637,18 @@ static void draw_animation(int x, int y, int grid_offset)
             (orientation == DIR_4_BOTTOM && xy == EDGE_X0Y0) ||
             (orientation == DIR_6_LEFT && xy == EDGE_X1Y0)) {
             building *gate = building_get(map_building_at(grid_offset));
-            int image_id = image_group(GROUP_BUILDING_GATEHOUSE);
             int color_mask = draw_building_as_deleted(gate) ? COLOR_MASK_RED : 0;
             if (gate->subtype.orientation == 1) {
                 if (orientation == DIR_0_TOP || orientation == DIR_4_BOTTOM) {
-                    image_draw(image_id, x - 22, y - 80, color_mask, draw_context.scale);
+                    image_draw(get_building_image_id_prefix(TEXTURE_BUILDING_WALL, 0), x - 22, y - 80, color_mask, draw_context.scale);
                 } else {
-                    image_draw(image_id + 1, x - 18, y - 81, color_mask, draw_context.scale);
+                    image_draw(get_building_image_id_prefix(TEXTURE_BUILDING_WALL, 1), x - 18, y - 81, color_mask, draw_context.scale);
                 }
             } else if (gate->subtype.orientation == 2) {
                 if (orientation == DIR_0_TOP || orientation == DIR_4_BOTTOM) {
-                    image_draw(image_id + 1, x - 18, y - 81, color_mask, draw_context.scale);
+                    image_draw(get_building_image_id_prefix(TEXTURE_BUILDING_WALL, 1), x - 18, y - 81, color_mask, draw_context.scale);
                 } else {
-                    image_draw(image_id, x - 22, y - 80, color_mask, draw_context.scale);
+                    image_draw(get_building_image_id_prefix(TEXTURE_BUILDING_WALL, 0), x - 22, y - 80, color_mask, draw_context.scale);
                 }
             }
         }

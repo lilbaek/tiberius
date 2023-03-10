@@ -690,6 +690,9 @@
     <image id="tree_31" width="116" height="106" isometric="true">
       <layer src="tree_31"/>
     </image>
+    <image id="tree_32" width="116" height="102" isometric="true">
+      <layer src="tree_32"/>
+    </image>
     <!-- Files related to ugly_grass -->
     <image id="ugly_grass_01" src="ugly_grass_01"/>
     <image id="ugly_grass_02" src="ugly_grass_02"/>

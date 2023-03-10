@@ -19,6 +19,7 @@
 #include "scenario/editor_map.h"
 #include "city/warning.h"
 #include "widget/minimap.h"
+#include "core/textures.h"
 
 #define TERRAIN_PAINT_MASK ~(TERRAIN_TREE | TERRAIN_ROCK | TERRAIN_WATER | TERRAIN_BUILDING |\
                             TERRAIN_SHRUB | TERRAIN_GARDEN | TERRAIN_ROAD | TERRAIN_MEADOW)
@@ -393,7 +394,7 @@ static void place_access_ramp(const map_tile *tile)
             }
         }
         map_building_tiles_add(0, tile->x, tile->y, 2,
-                               get_terrain_image_id(get_image_name("access_ramp_", orientation + 1)), TERRAIN_ACCESS_RAMP);
+                               get_terrain_image_id(get_image_name(TEXTURE_ACCESS_RAMP_PREFIX, orientation)), TERRAIN_ACCESS_RAMP);
 
         update_terrain_after_elevation_changes();
         scenario_editor_updated_terrain();

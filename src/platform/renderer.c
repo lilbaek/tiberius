@@ -13,6 +13,8 @@
 #include "platform/switch/switch.h"
 #include "platform/vita/vita.h"
 #include "ui/ui_window.h"
+#include "core/textures.h"
+#include "assets/assets.h"
 
 #include <math.h>
 #include <stdlib.h>
@@ -731,11 +733,11 @@ static void draw_saved_texture(int texture_id, int x, int y)
 
 static void create_blend_texture(custom_image_type type)
 {
-    SDL_Texture *texture = SDL_CreateTexture(data.renderer, SDL_PIXELFORMAT_ABGR8888, SDL_TEXTUREACCESS_TARGET, 58, 30);
+    SDL_Texture *texture = SDL_CreateTexture(data.renderer, SDL_PIXELFORMAT_ABGR8888, SDL_TEXTUREACCESS_TARGET, FOOTPRINT_WIDTH, FOOTPRINT_HEIGHT);
     if (!texture) {
         return;
     }
-    const image *img = image_get(image_group(GROUP_TERRAIN_FLAT_TILE));
+    const image *img = image_get(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE));
     SDL_Texture *flat_tile = get_texture(img->atlas.id);
     SDL_Texture *former_target = SDL_GetRenderTarget(data.renderer);
     SDL_Rect former_viewport;
@@ -744,7 +746,7 @@ static void create_blend_texture(custom_image_type type)
     SDL_RenderGetClipRect(data.renderer, &former_clip);
 
     SDL_SetRenderTarget(data.renderer, texture);
-    SDL_Rect rect = { 0, 0, 58, 30 };
+    SDL_Rect rect = { 0, 0, FOOTPRINT_WIDTH, FOOTPRINT_HEIGHT };
     SDL_RenderSetClipRect(data.renderer, &rect);
     SDL_RenderSetViewport(data.renderer, &rect);
     SDL_SetRenderDrawColor(data.renderer, 0xff, 0xff, 0xff, 0xff);
@@ -769,8 +771,8 @@ static void create_blend_texture(custom_image_type type)
     data.custom_textures[type].texture = texture;
     memset(&data.custom_textures[type].img, 0, sizeof(data.custom_textures[type].img));
     data.custom_textures[type].img.is_isometric = 1;
-    data.custom_textures[type].img.width = 58;
-    data.custom_textures[type].img.height = 30;
+    data.custom_textures[type].img.width = FOOTPRINT_WIDTH;
+    data.custom_textures[type].img.height = FOOTPRINT_HEIGHT;
     data.custom_textures[type].img.atlas.id = (ATLAS_CUSTOM << IMAGE_ATLAS_BIT_OFFSET) | type;
 }
 

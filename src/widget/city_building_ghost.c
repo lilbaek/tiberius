@@ -44,6 +44,7 @@
 #include "widget/city.h"
 #include "widget/city_bridge.h"
 #include "widget/city_water_ghost.h"
+#include "core/textures.h"
 
 #include <stdlib.h>
 
@@ -53,8 +54,8 @@
 #define MAX_TILES (7 * 7)
 
 #define GRID_OFFSET(x, y) ((x) + GRID_SIZE * (y))
-#define X_VIEW_OFFSET(x, y) (((x) - (y)) * 30)
-#define Y_VIEW_OFFSET(x, y) (((x) + (y)) * 15)
+#define X_VIEW_OFFSET(x, y) (((x) - (y)) * HALF_TILE_WIDTH_PIXELS)
+#define Y_VIEW_OFFSET(x, y) (((x) + (y)) * HALF_TILE_HEIGHT_PIXELS)
 
 typedef struct {
     int x;
@@ -179,7 +180,7 @@ static void draw_building_tiles(int x, int y, int num_tiles, int *blocked_tiles)
         if (blocked_tiles[i]) {
             image_blend_footprint_color(x_offset, y_offset, COLOR_MASK_RED, data.scale);
         } else {
-            image_draw_isometric_footprint(image_group(GROUP_TERRAIN_FLAT_TILE),
+            image_draw_isometric_footprint(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE),
                 x_offset, y_offset, COLOR_MASK_FOOTPRINT_GHOST, data.scale);
         }
     }
@@ -193,12 +194,12 @@ static void draw_building(int image_id, int x, int y, color_t color)
 
 void city_building_ghost_draw_well_range(int x, int y, int grid_offset)
 {
-    image_draw(image_group(GROUP_TERRAIN_FLAT_TILE), x, y, COLOR_MASK_DARK_BLUE, data.scale);
+    image_draw(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE), x, y, COLOR_MASK_DARK_BLUE, data.scale);
 }
 
 void city_building_ghost_draw_fountain_range(int x, int y, int grid_offset)
 {
-    image_draw(image_group(GROUP_TERRAIN_FLAT_TILE), x, y, COLOR_MASK_BLUE, data.scale);
+    image_draw(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE), x, y, COLOR_MASK_BLUE, data.scale);
 }
 
 static void image_draw_warehouse(int image_id, int x, int y, color_t color)
@@ -255,7 +256,7 @@ static void draw_regular_building(building_type type, int image_id, int x, int y
         image_draw_isometric_footprint(image_id, x, y, color, data.scale);
         image_draw(image_id + 1, x - 32, y - 64, color, data.scale);
     } else if (type == BUILDING_HOUSE_VACANT_LOT) {
-        draw_building(image_group(GROUP_BUILDING_HOUSE_VACANT_LOT), x, y, color);
+        draw_building(assets_get_image_id(TEXTURE_HOUSING_NAME, TEXTURE_HOUSING_VACANT), x, y, color);
     } else if (type == BUILDING_TRIUMPHAL_ARCH) {
         draw_building(image_id, x, y, color);
         if (image_id == image_group(GROUP_BUILDING_TRIUMPHAL_ARCH)) {
@@ -515,7 +516,7 @@ static void draw_first_reservoir_range(int x, int y, int grid_offset)
         data.reservoir_range.total++;
     }
     int color_mask = data.reservoir_range.blocked ? COLOR_MASK_GREY : COLOR_MASK_BLUE;
-    image_draw(image_group(GROUP_TERRAIN_FLAT_TILE), x, y, color_mask, data.scale);
+    image_draw(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE), x, y, color_mask, data.scale);
 }
 
 static void draw_second_reservoir_range(int x, int y, int grid_offset)
@@ -526,7 +527,7 @@ static void draw_second_reservoir_range(int x, int y, int grid_offset)
         }
     }
     int color_mask = data.reservoir_range.blocked ? COLOR_MASK_GREY : COLOR_MASK_BLUE;
-    image_draw(image_group(GROUP_TERRAIN_FLAT_TILE), x, y, color_mask, data.scale);
+    image_draw(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE), x, y, color_mask, data.scale);
 }
 
 static void draw_draggable_reservoir(const map_tile *tile, int x, int y)
@@ -718,7 +719,8 @@ static void draw_well(const map_tile *tile, int x, int y)
     } else {
         color_mask = COLOR_MASK_BUILDING_GHOST;
     }
-    int image_id = image_group(building_properties_for_type(BUILDING_WELL)->image_group);
+    const building_properties *ptr = building_properties_for_type(BUILDING_WELL);
+    int image_id = assets_get_image_id(ptr->asset_name, ptr->asset_image_id);
     if (config_get(CONFIG_UI_SHOW_WATER_STRUCTURE_RANGE)) {
         city_water_ghost_draw_water_structure_ranges();
         city_view_foreach_tile_in_range(tile->grid_offset, 1, map_water_supply_well_radius(), city_building_ghost_draw_well_range);
@@ -1048,7 +1050,7 @@ static void draw_waterside_building(const map_tile *tile, int x, int y, building
                     image_blend_footprint_color(x + X_VIEW_OFFSET(dx, dy), y + Y_VIEW_OFFSET(dx, dy),
                         COLOR_MASK_RED, data.scale);
                 } else {
-                    image_draw_isometric_footprint(image_group(GROUP_TERRAIN_FLAT_TILE),
+                    image_draw_isometric_footprint(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE),
                         x + X_VIEW_OFFSET(dx, dy), y + Y_VIEW_OFFSET(dx, dy), COLOR_MASK_FOOTPRINT_GHOST, data.scale);
                 }
             }
@@ -1081,7 +1083,7 @@ static void draw_road(const map_tile *tile, int x, int y)
     } else if (map_terrain_is(grid_offset, TERRAIN_NOT_CLEAR)) {
         blocked = 1;
     } else {
-        image_id = image_group(GROUP_TERRAIN_ROAD);
+        image_id = assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_ROAD);
         if (!map_terrain_has_adjacent_x_with_type(grid_offset, TERRAIN_ROAD) &&
             map_terrain_has_adjacent_y_with_type(grid_offset, TERRAIN_ROAD)) {
             image_id++;
@@ -1099,7 +1101,7 @@ static void draw_road(const map_tile *tile, int x, int y)
 
 static void draw_market_range(int x, int y, int grid_offset)
 {
-    image_draw(image_group(GROUP_TERRAIN_FLAT_TILE), x, y, COLOR_MASK_GREY, data.scale);
+    image_draw(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE), x, y, COLOR_MASK_GREY, data.scale);
 }
 
 static void draw_market(const map_tile *tile, int x, int y)
@@ -1120,7 +1122,8 @@ static void draw_market(const map_tile *tile, int x, int y)
     if (config_get(CONFIG_UI_SHOW_MARKET_RANGE)) {
         city_view_foreach_tile_in_range(tile->grid_offset, 2, MARKET_MAX_DISTANCE, draw_market_range);
     }
-    int image_id = image_group(building_properties_for_type(BUILDING_MARKET)->image_group);
+    const building_properties *ptr = building_properties_for_type(BUILDING_MARKET);
+    int image_id = assets_get_image_id(ptr->asset_name, ptr->asset_image_id);
     color_t color = blocked ? COLOR_MASK_BUILDING_GHOST_RED : COLOR_MASK_BUILDING_GHOST;
     draw_building(image_id, x, y, color);
     draw_building_tiles(x, y, num_tiles, blocked_tiles);
@@ -1156,7 +1159,7 @@ static void draw_highway(const map_tile *tile, int x, int y)
 
 static void draw_grand_temple_neptune_range(int x, int y, int grid_offset)
 {
-    image_draw(image_group(GROUP_TERRAIN_FLAT_TILE), x, y, COLOR_MASK_BLUE, data.scale);
+    image_draw(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE), x, y, COLOR_MASK_BLUE, data.scale);
 }
 
 static void draw_grand_temple_neptune(const map_tile *tile, int x, int y)

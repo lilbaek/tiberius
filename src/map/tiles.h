@@ -4,10 +4,6 @@
 
 #include "core/sds.h"
 
-// TODO: Move me somewhere else
-sds get_image_name(char *prefix, int index);
-int get_terrain_image_id(sds image_name);
-
 void map_tiles_update_all_rocks(void);
 
 void map_tiles_update_region_trees(int x_min, int y_min, int x_max, int y_max);

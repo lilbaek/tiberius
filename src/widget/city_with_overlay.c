@@ -35,6 +35,7 @@
 #include "widget/city_overlay_risks.h"
 #include "widget/city_without_overlay.h"
 #include "widget/city_draw_highway.h"
+#include "core/textures.h"
 
 static const city_overlay *overlay = 0;
 static float scale = SCALE_NONE;
@@ -211,7 +212,7 @@ static int has_adjacent_deletion(int grid_offset)
 
 static void draw_flattened_building_footprint(const building *b, int x, int y, int image_offset, color_t color_mask)
 {
-    int image_base = image_group(GROUP_TERRAIN_OVERLAY) + image_offset;
+    int image_base = assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_OVERLAY) + image_offset;
     if (b->house_size) {
         image_base += 4;
     }
@@ -362,13 +363,13 @@ static void draw_roamer_frequency(int x, int y, int grid_offset)
         static color_t frequency_colors[] = {
             0x663377ff, 0x662266ee, 0x661155dd, 0x660044cc, 0x660033c4, 0x660022bb, 0x660011a4, 0x66000088
         };
-        image_draw(image_group(GROUP_TERRAIN_FLAT_TILE), x, y, frequency_colors[travel_frequency - 1], scale);
+        image_draw(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE), x, y, frequency_colors[travel_frequency - 1], scale);
     } else if (travel_frequency == FIGURE_ROAMER_PREVIEW_ENTRY_TILE) {
         image_blend_footprint_color(x, y, COLOR_MASK_RED, scale);
     } else if (travel_frequency == FIGURE_ROAMER_PREVIEW_EXIT_TILE) {
         image_blend_footprint_color(x, y, COLOR_MASK_GREEN, scale);
     } else if (travel_frequency == FIGURE_ROAMER_PREVIEW_ENTRY_EXIT_TILE) {
-        image_draw_isometric_footprint(image_group(GROUP_TERRAIN_FLAT_TILE),
+        image_draw_isometric_footprint(assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_FLAT_TILE),
             x, y, COLOR_MASK_FOOTPRINT_GHOST, scale);
     }
 }
@@ -388,7 +389,7 @@ static void draw_footprint(int x, int y, int grid_offset)
         } else if (terrain & (TERRAIN_AQUEDUCT | TERRAIN_WALL)) {
             if (terrain & TERRAIN_ROAD) {
                 // Draw the equivalent road tile.
-                int image_id = image_group(GROUP_TERRAIN_ROAD);
+                int image_id = assets_get_image_id(TEXTURE_BASIC_NAME, TEXTURE_BASIC_ROAD);
                 if (map_tiles_is_paved_road(grid_offset)) {
                     const terrain_image *img = map_image_context_get_paved_road(grid_offset);
                     image_id += img->group_offset + img->item_offset;
@@ -399,7 +400,7 @@ static void draw_footprint(int x, int y, int grid_offset)
                 image_draw_isometric_footprint_from_draw_tile(image_id, x, y, 0, scale);
             } else {    
                 // display grass
-                int image_id = assets_get_image_id("terrain", "grass_1_01") + (map_random_get(grid_offset) & 7);
+                int image_id = assets_get_image_id(TEXTURE_TERRAIN_NAME, TEXTURE_GRASS_1) + (map_random_get(grid_offset) & 7);
                 image_draw_isometric_footprint_from_draw_tile(image_id, x, y, 0, scale);
             }
         } else if ((terrain & TERRAIN_ROAD) && !(terrain & TERRAIN_BUILDING)) {

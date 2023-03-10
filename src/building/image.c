@@ -15,23 +15,25 @@
 #include "game/resource.h"
 #include "map/random.h"
 #include "scenario/property.h"
+#include "core/textures.h"
 
 static const struct {
-    int group;
+    char* group;
     int offset;
     int num_types;
 } HOUSE_IMAGE[20] = {
-    {GROUP_BUILDING_HOUSE_TENT, 0, 2}, {GROUP_BUILDING_HOUSE_TENT, 2, 2},
-    {GROUP_BUILDING_HOUSE_SHACK, 0, 2}, {GROUP_BUILDING_HOUSE_SHACK, 2, 2},
-    {GROUP_BUILDING_HOUSE_HOVEL, 0, 2}, {GROUP_BUILDING_HOUSE_HOVEL, 2, 2},
-    {GROUP_BUILDING_HOUSE_CASA, 0, 2}, {GROUP_BUILDING_HOUSE_CASA, 2, 2},
-    {GROUP_BUILDING_HOUSE_INSULA_1, 0, 2}, {GROUP_BUILDING_HOUSE_INSULA_1, 2, 2},
-    {GROUP_BUILDING_HOUSE_INSULA_2, 0, 2}, {GROUP_BUILDING_HOUSE_INSULA_2, 2, 2},
-    {GROUP_BUILDING_HOUSE_VILLA_1, 0, 2}, {GROUP_BUILDING_HOUSE_VILLA_1, 2, 2},
-    {GROUP_BUILDING_HOUSE_VILLA_2, 0, 1}, {GROUP_BUILDING_HOUSE_VILLA_2, 1, 1},
-    {GROUP_BUILDING_HOUSE_PALACE_1, 0, 1}, {GROUP_BUILDING_HOUSE_PALACE_1, 1, 1},
-    {GROUP_BUILDING_HOUSE_PALACE_2, 0, 1}, {GROUP_BUILDING_HOUSE_PALACE_2, 1, 1},
+    {TEXTURE_HOUSING_TENT, 0, 2}, {TEXTURE_HOUSING_TENT, 2, 2},
+    {TEXTURE_HOUSING_SHACK, 0, 2}, {TEXTURE_HOUSING_SHACK, 2, 2},
+    {TEXTURE_HOUSING_HOVEL, 0, 2}, {TEXTURE_HOUSING_HOVEL, 2, 2},
+    {TEXTURE_HOUSING_CASA, 0, 2}, {TEXTURE_HOUSING_CASA, 2, 2},
+    {TEXTURE_HOUSING_INSULA_1, 0, 2}, {TEXTURE_HOUSING_INSULA_1, 2, 2},
+    {TEXTURE_HOUSING_INSULA_2, 0, 2}, {TEXTURE_HOUSING_INSULA_2, 2, 2},
+    {TEXTURE_HOUSING_VILLA_1, 0, 2}, {TEXTURE_HOUSING_VILLA_1, 2, 2},
+    {TEXTURE_HOUSING_VILLA_2, 0, 1}, {TEXTURE_HOUSING_VILLA_2, 1, 1},
+    {TEXTURE_HOUSING_PALACE_1, 0, 1}, {TEXTURE_HOUSING_PALACE_1, 1, 1},
+    {TEXTURE_HOUSING_PALACE_2, 0, 1}, {TEXTURE_HOUSING_PALACE_2, 1, 1},
 };
+
 
 int building_image_get_base_farm_crop(building_type type)
 {
@@ -60,7 +62,7 @@ int building_image_get(const building *b)
     switch (b->type) {
         case BUILDING_HOUSE_VACANT_LOT:
             if (b->house_population == 0) {
-                return image_group(GROUP_BUILDING_HOUSE_VACANT_LOT);
+                return assets_get_image_id(TEXTURE_HOUSING_NAME, TEXTURE_HOUSING_VACANT);
             }
             // fallthrough
         case BUILDING_HOUSE_LARGE_TENT:
@@ -83,7 +85,7 @@ int building_image_get(const building *b)
         case BUILDING_HOUSE_LARGE_PALACE:
         case BUILDING_HOUSE_LUXURY_PALACE:
             {
-                int image_id = image_group(HOUSE_IMAGE[b->subtype.house_level].group);
+                int image_id = assets_get_image_id(TEXTURE_HOUSING_NAME, HOUSE_IMAGE[b->subtype.house_level].group);
                 if (b->house_is_merged) {
                     image_id += 4;
                     if (HOUSE_IMAGE[b->subtype.house_level].offset) {
@@ -262,9 +264,9 @@ int building_image_get(const building *b)
             return image_group(GROUP_BUILDING_GRANARY);
         case BUILDING_MARKET:
             if (!b->upgrade_level) {
-                return image_group(GROUP_BUILDING_MARKET);
+                return assets_get_image_id(TEXTURE_BUILDING_NAME, TEXTURE_BUILDING_MARKET);
             } else {
-                return image_group(GROUP_BUILDING_MARKET_FANCY);
+                return assets_get_image_id(TEXTURE_BUILDING_NAME, TEXTURE_BUILDING_MARKET_FANCY);
             }
         case BUILDING_GOVERNORS_HOUSE:
             return image_group(GROUP_BUILDING_GOVERNORS_HOUSE);
@@ -291,7 +293,7 @@ int building_image_get(const building *b)
                 return image_group(GROUP_BUILDING_FOUNTAIN_1);
             }
         case BUILDING_WELL:
-            return image_group(GROUP_BUILDING_WELL);
+            return assets_get_image_id(TEXTURE_BUILDING_NAME, TEXTURE_BUILDING_WELL);
         case BUILDING_RESERVOIR:
             return image_group(GROUP_BUILDING_RESERVOIR);
         case BUILDING_MILITARY_ACADEMY:
