@@ -56,3 +56,6 @@ local.properties
 # lib files
 ext/SDL2/*.zip
 ext/SDL2/*.tar.gz
+/res/assets/building/
+/res/assets/basic/
+/res/assets/housing/

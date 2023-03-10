@@ -47,6 +47,7 @@
 #include "core/textures.h"
 
 #include <stdlib.h>
+#include <string.h>
 
 #define RESERVOIR_RANGE_MAX_TILES 900
 
@@ -273,7 +274,12 @@ static void draw_regular_building(building_type type, int image_id, int x, int y
 static int get_building_image_id(int map_x, int map_y, building_type type, const building_properties *props)
 {
     int image_id;
-    image_id = image_group(props->image_group) + props->image_offset;
+
+    if(props->asset_name != NULL) {
+        image_id = get_image_id_prefix(props->asset_name, props->asset_image_id,  props->image_offset);
+    } else {
+        image_id = image_group(props->image_group) + props->image_offset;
+    }
 
     if (type == BUILDING_GATEHOUSE) {
         int orientation = map_orientation_for_gatehouse(map_x, map_y);
@@ -464,6 +470,7 @@ static void draw_default(const map_tile *tile, int x_view, int y_view, building_
             blocked_tiles[i] = 0;
         }
     }
+    // TODO: Phase this out
     if (type >= BUILDING_ROADBLOCK || type == BUILDING_LIBRARY || type == BUILDING_SMALL_STATUE || type == BUILDING_MEDIUM_STATUE) {
         image_id = get_new_building_image_id(tile->x, tile->y, grid_offset, type, props);
         draw_regular_building(type, image_id, x_view, y_view, grid_offset, num_tiles, blocked_tiles);

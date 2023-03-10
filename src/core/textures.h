@@ -57,4 +57,6 @@ sds get_image_name(char *prefix, int index);
 unsigned int get_housing_image_id_prefix(char *prefix, int index);
 unsigned int get_building_image_id_prefix(char *prefix, int index);
 
+unsigned int get_image_id_prefix(char *assetlist_name, char *prefix, int index);
+
 #endif // CORE_TEXTURES_H

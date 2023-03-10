@@ -52,3 +52,10 @@ unsigned int get_building_image_id_prefix(char *prefix, int index) {
     sdsfree(name);
     return id;
 }
+
+unsigned int get_image_id_prefix(char *assetlist_name, char *prefix, int index) {
+    sds name = get_image_name(prefix, index);
+    int id = assets_get_image_id(assetlist_name, name);
+    sdsfree(name);
+    return id;
+}

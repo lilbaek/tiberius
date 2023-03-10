@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!DOCTYPE assetlist>
+<assetlist name="building">
+    <!-- Files related to gatehouse -->
+    <image id="gatehouse_01" width="192" height="218" isometric="true">
+      <layer src="gatehouse_01"/>
+    </image>
+    <image id="gatehouse_02" width="200" height="210" isometric="true">
+      <layer src="gatehouse_02"/>
+    </image>
+    <!-- Files related to market -->
+    <image id="market_01" width="236" height="128" isometric="true">
+      <layer src="market_01"/>
+    </image>
+    <image id="market_02" width="236" height="164" isometric="true">
+      <layer src="market_02"/>
+    </image>
+    <!-- Files related to wall -->
+    <image id="wall_01" width="116" height="60" isometric="true">
+      <layer src="wall_01"/>
+    </image>
+    <image id="wall_02" width="116" height="112" isometric="true">
+      <layer src="wall_02"/>
+    </image>
+    <image id="wall_03" width="116" height="100" isometric="true">
+      <layer src="wall_03"/>
+    </image>
+    <image id="wall_04" width="116" height="100" isometric="true">
+      <layer src="wall_04"/>
+    </image>
+    <image id="wall_05" width="116" height="112" isometric="true">
+      <layer src="wall_05"/>
+    </image>
+    <image id="wall_06" width="116" height="108" isometric="true">
+      <layer src="wall_06"/>
+    </image>
+    <image id="wall_07" width="116" height="96" isometric="true">
+      <layer src="wall_07"/>
+    </image>
+    <image id="wall_08" width="116" height="98" isometric="true">
+      <layer src="wall_08"/>
+    </image>
+    <image id="wall_09" width="116" height="90" isometric="true">
+      <layer src="wall_09"/>
+    </image>
+    <image id="wall_10" width="116" height="90" isometric="true">
+      <layer src="wall_10"/>
+    </image>
+    <image id="wall_11" width="116" height="108" isometric="true">
+      <layer src="wall_11"/>
+    </image>
+    <image id="wall_12" width="116" height="96" isometric="true">
+      <layer src="wall_12"/>
+    </image>
+    <image id="wall_13" width="116" height="124" isometric="true">
+      <layer src="wall_13"/>
+    </image>
+    <image id="wall_14" width="116" height="112" isometric="true">
+      <layer src="wall_14"/>
+    </image>
+    <image id="wall_15" width="116" height="112" isometric="true">
+      <layer src="wall_15"/>
+    </image>
+    <image id="wall_16" width="116" height="124" isometric="true">
+      <layer src="wall_16"/>
+    </image>
+    <image id="wall_17" width="116" height="124" isometric="true">
+      <layer src="wall_17"/>
+    </image>
+    <image id="wall_18" width="116" height="124" isometric="true">
+      <layer src="wall_18"/>
+    </image>
+    <image id="wall_19" width="116" height="86" isometric="true">
+      <layer src="wall_19"/>
+    </image>
+    <image id="wall_20" width="116" height="110" isometric="true">
+      <layer src="wall_20"/>
+    </image>
+    <image id="wall_21" width="116" height="86" isometric="true">
+      <layer src="wall_21"/>
+    </image>
+    <image id="wall_22" width="116" height="110" isometric="true">
+      <layer src="wall_22"/>
+    </image>
+    <image id="wall_23" width="116" height="112" isometric="true">
+      <layer src="wall_23"/>
+    </image>
+    <image id="wall_24" width="116" height="110" isometric="true">
+      <layer src="wall_24"/>
+    </image>
+    <image id="wall_25" width="116" height="110" isometric="true">
+      <layer src="wall_25"/>
+    </image>
+    <image id="wall_26" width="116" height="110" isometric="true">
+      <layer src="wall_26"/>
+    </image>
+    <image id="wall_27" width="116" height="124" isometric="true">
+      <layer src="wall_27"/>
+    </image>
+    <image id="wall_28" width="116" height="124" isometric="true">
+      <layer src="wall_28"/>
+    </image>
+    <image id="wall_29" width="116" height="124" isometric="true">
+      <layer src="wall_29"/>
+    </image>
+    <image id="wall_30" width="116" height="144" isometric="true">
+      <layer src="wall_30"/>
+    </image>
+    <image id="wall_31" width="116" height="132" isometric="true">
+      <layer src="wall_31"/>
+    </image>
+    <image id="wall_32" width="116" height="124" isometric="true">
+      <layer src="wall_32"/>
+    </image>
+    <image id="wall_33" width="116" height="124" isometric="true">
+      <layer src="wall_33"/>
+    </image>
+    <image id="wall_34" width="116" height="86" isometric="true">
+      <layer src="wall_34"/>
+    </image>
+    <!-- Files related to well -->
+    <image id="well_01" width="116" height="106" isometric="true">
+      <layer src="well_01"/>
+    </image>
+</assetlist>
