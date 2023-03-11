@@ -26,6 +26,7 @@
 #include "ui/nuklear.h"
 #include "ui/ui_window.h"
 #include "platform/renderer.h"
+#include "ui/cheat.h"
 
 #define MAX_BUTTONS 6
 

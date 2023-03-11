@@ -27,7 +27,7 @@
 /*#define INCLUDE_ALL */
 /*#define INCLUDE_STYLE */
 /*#define INCLUDE_CALCULATOR */
-/*#define INCLUDE_OVERVIEW */
+#define INCLUDE_OVERVIEW
 /*#define INCLUDE_NODE_EDITOR */
 
 #ifdef INCLUDE_ALL
@@ -49,6 +49,8 @@
 #endif
 #ifdef INCLUDE_OVERVIEW
 #include "demo/overview.c"
+#include "cheat.h"
+
 #endif
 #ifdef INCLUDE_NODE_EDITOR
 #include "demo/node_editor.c"
@@ -141,6 +143,7 @@ void ui_teardown() {
 
 void ui_prepare() {
     nk_style_set_font(ui_data_struct.ctx, &ui_data_struct.proggy_clean->handle);
+    window_cheat_render();
     /* -------------- EXAMPLES ---------------- */
 #ifdef INCLUDE_CALCULATOR
     calculator(ui_data_struct.ctx);
@@ -149,7 +152,7 @@ void ui_prepare() {
     canvas(ui_data_struct.ctx);
 #endif
 #ifdef INCLUDE_OVERVIEW
-    overview(ui_data_struct.ctx);
+    //overview(ui_data_struct.ctx);
 #endif
 #ifdef INCLUDE_NODE_EDITOR
     node_editor(ui_data_struct.ctx);
