@@ -772,7 +772,8 @@ int image_load_climate(int climate_id, int is_editor, int force_reload, int keep
     data.images_with_tops = 0;
 
 
-    //printFileName(GROUP_BUILDING_GATEHOUSE, 2);
+    printFileName(GROUP_FIGURE_MIGRANT, 2);
+    printFileName(GROUP_FIGURE_MIGRANT_CART, 2);
     return 1;
 }
 

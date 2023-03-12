@@ -8,7 +8,7 @@
 #define TEXTURE_UGLY_GRASS "ugly_grass_01"
 #define TEXTURE_EARTHQUAKE "earthquake_01"
 #define TEXTURE_GRASS_1 "grass_1_01"
-#define TEXTURE_GRASS_2 "grass_2_01"
+#define TEXTURE_GRASS_2 "grass_1_01"
 #define TEXTURE_MEADOW_PREFIX "meadow_"
 #define TEXTURE_SHRUB_PREFIX "shrub_"
 #define TEXTURE_TREE_PREFIX "tree_"
@@ -45,6 +45,8 @@
 #define TEXTURE_BUILDING_WELL "well_01"
 #define TEXTURE_BUILDING_WALL "wall_"
 #define TEXTURE_BUILDING_GATEHOUSE "gatehouse_"
+#define TEXTURE_BUILDING_TOWER "tower_"
+#define TEXTURE_BUILDING_TOWER_INDEX "tower_01"
 
 unsigned int get_terrain_image_id(sds image_name);
 unsigned int get_terrain_image_id_prefix(char *prefix, int index);

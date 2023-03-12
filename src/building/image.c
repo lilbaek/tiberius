@@ -373,22 +373,22 @@ int building_image_get(const building *b)
                     return image_group(GROUP_BUILDING_DOCK_4);
             }
         case BUILDING_TOWER:
-            return image_group(GROUP_BUILDING_TOWER);
+            return assets_get_image_id(TEXTURE_BUILDING_NAME, TEXTURE_BUILDING_TOWER_INDEX);
         case BUILDING_GATEHOUSE:
             {
                 int map_orientation = city_view_orientation();
                 int orientation_is_top_bottom = map_orientation == DIR_0_TOP || map_orientation == DIR_4_BOTTOM;
                 if (b->subtype.orientation == 1) {
                     if (orientation_is_top_bottom) {
-                        return image_group(GROUP_BUILDING_TOWER) + 1;
+                        return assets_get_image_id(TEXTURE_BUILDING_NAME, TEXTURE_BUILDING_TOWER_INDEX)+ 1;
                     } else {
-                        return image_group(GROUP_BUILDING_TOWER) + 2;
+                        return assets_get_image_id(TEXTURE_BUILDING_NAME, TEXTURE_BUILDING_TOWER_INDEX) + 2;
                     }
                 } else {
                     if (orientation_is_top_bottom) {
-                        return image_group(GROUP_BUILDING_TOWER) + 2;
+                        return assets_get_image_id(TEXTURE_BUILDING_NAME, TEXTURE_BUILDING_TOWER_INDEX) + 2;
                     } else {
-                        return image_group(GROUP_BUILDING_TOWER) + 1;
+                        return assets_get_image_id(TEXTURE_BUILDING_NAME, TEXTURE_BUILDING_TOWER_INDEX) + 1;
                     }
                 }
             }

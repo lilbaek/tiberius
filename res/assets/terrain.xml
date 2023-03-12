@@ -312,6 +312,12 @@
     <image id="grass_1_56" src="grass_1_56"/>
     <image id="grass_1_57" src="grass_1_57"/>
     <image id="grass_1_58" src="grass_1_58"/>
+    <image id="grass_1_59" src="grass_1_59"/>
+    <image id="grass_1_60" src="grass_1_60"/>
+    <image id="grass_1_61" src="grass_1_61"/>
+    <image id="grass_1_62" src="grass_1_62"/>
+    <image id="grass_1_63" src="grass_1_63"/>
+    <image id="grass_1_64" src="grass_1_64"/>
     <image id="grass_1" src="grass_1_01">
       <layer group="this" image="grass_1_01" x="0" y="0"/>
       <layer group="this" image="grass_1_02" x="0" y="0"/>
@@ -371,6 +377,12 @@
       <layer group="this" image="grass_1_56" x="0" y="0"/>
       <layer group="this" image="grass_1_57" x="0" y="0"/>
       <layer group="this" image="grass_1_58" x="0" y="0"/>
+      <layer group="this" image="grass_1_59" x="0" y="0"/>
+      <layer group="this" image="grass_1_60" x="0" y="0"/>
+      <layer group="this" image="grass_1_61" x="0" y="0"/>
+      <layer group="this" image="grass_1_62" x="0" y="0"/>
+      <layer group="this" image="grass_1_63" x="0" y="0"/>
+      <layer group="this" image="grass_1_64" x="0" y="0"/>
     </image>
     <!-- Files related to grass_2 -->
     <image id="grass_2_01" src="grass_2_01"/>
@@ -513,7 +525,7 @@
     <image id="meadow_07" width="116" height="64" isometric="true">
       <layer src="meadow_07"/>
     </image>
-    <image id="meadow_08" width="116" height="60" isometric="true">
+    <image id="meadow_08" width="116" height="62" isometric="true">
       <layer src="meadow_08"/>
     </image>
     <image id="meadow_09" width="116" height="64" isometric="true">
@@ -603,7 +615,7 @@
     <image id="tree_02" width="116" height="62" isometric="true">
       <layer src="tree_02"/>
     </image>
-    <image id="tree_03" width="116" height="82" isometric="true">
+    <image id="tree_03" width="116" height="70" isometric="true">
       <layer src="tree_03"/>
     </image>
     <image id="tree_04" width="116" height="84" isometric="true">

@@ -15,6 +15,16 @@
     <image id="market_02" width="236" height="164" isometric="true">
       <layer src="market_02"/>
     </image>
+    <!-- Files related to tower -->
+    <image id="tower_01" width="236" height="234" isometric="true">
+      <layer src="tower_01"/>
+    </image>
+    <image id="tower_02" width="236" height="220" isometric="true">
+      <layer src="tower_02"/>
+    </image>
+    <image id="tower_03" width="236" height="222" isometric="true">
+      <layer src="tower_03"/>
+    </image>
     <!-- Files related to wall -->
     <image id="wall_01" width="116" height="60" isometric="true">
       <layer src="wall_01"/>

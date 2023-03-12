@@ -137,7 +137,7 @@ int zoom_update_value(int *zoom, int max, pixel_offset *camera_position)
         step = current_zoom - *zoom;
     }
 
-    int result = calc_bound(*zoom + step, 100, max);
+    int result = calc_bound(*zoom + step, 130, max);
     if (*zoom == result) {
         speed_clear(&data.step);
         data.delta = 0;
